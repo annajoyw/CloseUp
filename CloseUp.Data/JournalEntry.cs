@@ -7,21 +7,27 @@ using System.Threading.Tasks;
 
 namespace CloseUp.Data
 {
-    class JournalEntry
+   public abstract class JournalEntry
     {
         [Key]
-        public int  EntryId{ get; set; }
+        public int JournalEntryId { get; set; }
 
+        [Required]
         public Guid UserId { get; set; }
 
-        public string Title { get; set; }
+        [Required]
+        //user has option to choose prompt or write their own
+        public string Prompt { get; set; }
 
+        [Required]
         public string Content { get; set; }
 
+        public string PhotoUrl { get; set; }
+
+        [Required]
         public bool IsPublic { get; set; }
 
+        [Required]
         public DateTimeOffset CreatedUtc { get; set; }
-
-        //fk to reply
     }
 }
