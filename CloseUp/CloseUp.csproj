@@ -236,6 +236,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\JournalEntry\Index.cshtml" />
+    <Content Include="Views\JournalEntry\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -257,6 +258,10 @@
     <ProjectReference Include="..\CloseUp.Data\CloseUp.Data.csproj">
       <Project>{753d988e-32b4-4567-9d08-f68df220f738}</Project>
       <Name>CloseUp.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CloseUp.Models\CloseUp.Models.csproj">
+      <Project>{ed544a8e-b5cb-4a2a-910d-465a0f305c33}</Project>
+      <Name>CloseUp.Models</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -13,5 +13,16 @@ namespace CloseUp.Controllers
         {
             return View();
         }
+
+        //get create
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        //post create
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create
     }
 }

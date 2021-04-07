@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CloseUp.Models
+namespace CloseUp.Services
 {
-    public class ReplyListItem
+    class JournalEntryServices
     {
     }
 }

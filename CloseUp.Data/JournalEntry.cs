@@ -17,14 +17,16 @@ namespace CloseUp.Data
 
         [Required]
         //user has option to choose prompt or write their own
-        public string Prompt { get; set; }
+        public List<string> Prompt { get; set; }
 
         [Required]
         public string Content { get; set; }
 
+        [Display(Name = "Photo")]
         public string PhotoUrl { get; set; }
 
         [Required]
+        [Display(Name = "Public Post")]
         public bool IsPublic { get; set; }
 
         [Required]
