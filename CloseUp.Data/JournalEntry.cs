@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CloseUp.Data
 {
-   public abstract class JournalEntry
+   public class JournalEntry
     {
         [Key]
         public int JournalEntryId { get; set; }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace CloseUp.Data
 {
-    class Reply
+    public class Reply
     {
         [Key]
         public int ReplyId { get; set; }

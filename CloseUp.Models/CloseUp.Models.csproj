@@ -54,7 +54,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JournalEntryCreate.cs" />
+    <Compile Include="JournalEntryDetail.cs" />
+    <Compile Include="JournalEntryEdit.cs" />
+    <Compile Include="JournalEntryListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReplyCreate.cs" />
+    <Compile Include="ReplyListItem.cs" />
+    <Compile Include="ResourceCreate.cs" />
+    <Compile Include="ResourceDetail.cs" />
+    <Compile Include="ResourceEdit.cs" />
+    <Compile Include="ResourceListItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

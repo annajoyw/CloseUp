@@ -33,6 +33,8 @@ namespace CloseUp.Data
         }
 
         public DbSet<JournalEntry> JournalEntries { get; set; }
+        public DbSet<HelpResource> HelpResources { get; set; }
+        public DbSet<Reply> Replies { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
