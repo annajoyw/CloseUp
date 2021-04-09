@@ -57,8 +57,10 @@
     <Compile Include="HelpResource.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="JournalEntry.cs" />
+    <Compile Include="PromptItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reply.cs" />
+    <Compile Include="SeededPromptData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

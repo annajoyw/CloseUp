@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Security.Claims;
@@ -20,8 +21,11 @@ namespace CloseUp.Data
         }
     }
 
+    
+
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+       
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
@@ -35,9 +39,15 @@ namespace CloseUp.Data
         public DbSet<JournalEntry> JournalEntries { get; set; }
         public DbSet<HelpResource> HelpResources { get; set; }
         public DbSet<Reply> Replies { get; set; }
+        public DbSet<PromptItem> Prompts { get; set; }
+
+        
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            
+
             modelBuilder
                 .Conventions
                 .Remove<PluralizingTableNameConvention>();
@@ -46,8 +56,13 @@ namespace CloseUp.Data
                 .Configurations
                 .Add(new IdentityUserLoginConfiguration())
                 .Add(new IdentityUserRoleConfiguration());
+
+           
+           
         }
     }
+
+
 
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
     {
@@ -64,4 +79,9 @@ namespace CloseUp.Data
             HasKey(iur => iur.UserId);
         }
     }
+
+    
+    
+      
+    
 }

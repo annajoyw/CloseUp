@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CloseUp.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -23,6 +24,13 @@ namespace CloseUp.Controllers
         //post create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create
+        public ActionResult Create(JournalEntryCreate model)
+        {
+            if (ModelState.IsValid)
+            {
+
+            }
+            return View(model);
+        }
     }
 }

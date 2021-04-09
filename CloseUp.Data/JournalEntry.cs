@@ -17,7 +17,7 @@ namespace CloseUp.Data
 
         [Required]
         //user has option to choose prompt or write their own
-        public List<string> Prompt { get; set; }
+        public String Prompt { get; set; }
 
         [Required]
         public string Content { get; set; }
