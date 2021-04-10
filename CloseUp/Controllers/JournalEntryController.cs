@@ -1,6 +1,11 @@
-﻿using CloseUp.Models;
+﻿using CloseUp.Data;
+using CloseUp.Models;
+using CloseUp.Services;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -12,13 +17,18 @@ namespace CloseUp.Controllers
         // GET: JournalEntry
         public ActionResult Index()
         {
-            return View();
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new JournalEntryServices(userId);
+
+            var model = service.GetEntries();
+
+            return View(model);
         }
 
         //get create
         public ActionResult Create()
         {
-            return View();
+                return View();
         }
 
         //post create
@@ -26,11 +36,18 @@ namespace CloseUp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(JournalEntryCreate model)
         {
-            if (ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
-
+                return View(model);
             }
-            return View(model);
+
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new JournalEntryServices(userId);
+
+            service.CreateEntry(model);
+
+            return RedirectToAction("Index");
+
         }
     }
 }

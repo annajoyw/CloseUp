@@ -13,7 +13,7 @@ namespace CloseUp.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202104090113241_init"; }
+            get { return "202104102331279_init"; }
         }
         
         string IMigrationMetadata.Source

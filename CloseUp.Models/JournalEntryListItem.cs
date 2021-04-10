@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CloseUp.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace CloseUp.Models
     {
         public int JournalEntryId { get; set; }
 
-        public List<string> Prompt { get; set; }
+        public string Prompt { get; set; }
 
 
         public string Content { get; set; }

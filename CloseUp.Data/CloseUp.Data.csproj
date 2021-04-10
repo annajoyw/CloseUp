@@ -57,9 +57,9 @@
     <Compile Include="HelpResource.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="JournalEntry.cs" />
-    <Compile Include="Migrations\202104090113241_init.cs" />
-    <Compile Include="Migrations\202104090113241_init.Designer.cs">
-      <DependentUpon>202104090113241_init.cs</DependentUpon>
+    <Compile Include="Migrations\202104102331279_init.cs" />
+    <Compile Include="Migrations\202104102331279_init.Designer.cs">
+      <DependentUpon>202104102331279_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PromptItem.cs" />
@@ -72,8 +72,8 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202104090113241_init.resx">
-      <DependentUpon>202104090113241_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202104102331279_init.resx">
+      <DependentUpon>202104102331279_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -70,5 +70,11 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CloseUp.Data\CloseUp.Data.csproj">
+      <Project>{753d988e-32b4-4567-9d08-f68df220f738}</Project>
+      <Name>CloseUp.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

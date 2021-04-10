@@ -15,9 +15,10 @@ namespace CloseUp.Data
         [Required]
         public Guid UserId { get; set; }
 
-        [Required]
+
         //user has option to choose prompt or write their own
-        public String Prompt { get; set; }
+        //prompt string here ? or virtual object
+        public string Prompt { get; set; }
 
         [Required]
         public string Content { get; set; }
@@ -31,5 +32,7 @@ namespace CloseUp.Data
 
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
+
+        //Reply here?
     }
 }

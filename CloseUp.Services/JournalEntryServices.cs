@@ -35,6 +35,20 @@ namespace CloseUp.Services
             }
         }
 
+        //public string SelectPrompt(string prompt)
+        //{
+        //    using (var ctx = new ApplicationDbContext())
+        //    {
+        //        var entity =
+        //            ctx
+        //            .Prompts
+        //            .Select(x => x.Prompt == prompt);
+
+        //        return new SelectPrompt
+
+        //    }
+        //}
+
         public IEnumerable<JournalEntryListItem> GetEntries()
         {
             using (var ctx = new ApplicationDbContext())
@@ -48,10 +62,14 @@ namespace CloseUp.Services
                         new JournalEntryListItem
                         {
                             JournalEntryId = e.JournalEntryId,
-
-
+                            Prompt = e.Prompt,
+                            Content = e.Content,
+                            PhotoUrl = e.PhotoUrl,
+                            IsPublic = e.IsPublic,
+                            CreatedUtc = e.CreatedUtc
                         }
-                        )
+                        );
+                return query.ToArray();
             }
         }
     }

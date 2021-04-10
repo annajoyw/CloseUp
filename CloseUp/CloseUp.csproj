@@ -236,8 +236,8 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\JournalEntry\Create.cshtml" />
     <Content Include="Views\JournalEntry\Index.cshtml" />
+    <Content Include="Views\JournalEntry\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -263,6 +263,10 @@
     <ProjectReference Include="..\CloseUp.Models\CloseUp.Models.csproj">
       <Project>{ed544a8e-b5cb-4a2a-910d-465a0f305c33}</Project>
       <Name>CloseUp.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CloseUp.Services\CloseUp.Services.csproj">
+      <Project>{94cb3ee8-a612-4e80-b050-434854edcd15}</Project>
+      <Name>CloseUp.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
