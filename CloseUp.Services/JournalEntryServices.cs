@@ -72,5 +72,24 @@ namespace CloseUp.Services
                 return query.ToArray();
             }
         }
+
+        public JournalEntryDetail GetEntryById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx.JournalEntries
+                    .Single(x => x.JournalEntryId == id && x.UserId == _userId);
+                return
+                    new JournalEntryDetail
+                    {
+                        EntryId = entity.JournalEntryId,
+                        Prompt = entity.Prompt,
+                        Content = entity.Content,
+                        PhotoUrl = entity.PhotoUrl,
+                        IsPublic = entity.IsPublic,
+                    };
+            }
+        }
     }
 }

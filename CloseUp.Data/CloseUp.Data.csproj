@@ -61,6 +61,10 @@
     <Compile Include="Migrations\202104102331279_init.Designer.cs">
       <DependentUpon>202104102331279_init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104110010209_lol.cs" />
+    <Compile Include="Migrations\202104110010209_lol.Designer.cs">
+      <DependentUpon>202104110010209_lol.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PromptItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +78,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104102331279_init.resx">
       <DependentUpon>202104102331279_init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104110010209_lol.resx">
+      <DependentUpon>202104110010209_lol.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

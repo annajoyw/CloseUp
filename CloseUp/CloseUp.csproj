@@ -238,6 +238,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\JournalEntry\Index.cshtml" />
     <Content Include="Views\JournalEntry\Create.cshtml" />
+    <Content Include="Views\JournalEntry\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

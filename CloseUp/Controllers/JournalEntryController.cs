@@ -47,6 +47,16 @@ namespace CloseUp.Controllers
             service.CreateEntry(model);
 
             return RedirectToAction("Index");
+        }
+
+        public ActionResult Details (int id)
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new JournalEntryServices(userId);
+
+            var model = service.GetEntryById(id);
+
+            return View(model);
 
         }
     }
