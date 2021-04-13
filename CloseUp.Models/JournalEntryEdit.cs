@@ -8,5 +8,10 @@ namespace CloseUp.Models
 {
     public class JournalEntryEdit
     {
+        public int JournalEntryId { get; set; }
+        public string Content { get; set; }
+        public string PhotoUrl { get; set; }
+        public bool IsPublic { get; set; }
+
     }
 }

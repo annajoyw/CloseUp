@@ -59,5 +59,70 @@ namespace CloseUp.Controllers
             return View(model);
 
         }
+
+        public ActionResult Edit(int id)
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new JournalEntryServices(userId);
+
+            var detail = service.GetEntryById(id);
+
+            var model =
+                new JournalEntryEdit
+                {
+                    JournalEntryId = detail.EntryId,
+                    Content = detail.Content,
+                    PhotoUrl = detail.PhotoUrl,
+                    IsPublic = detail.IsPublic
+                };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, JournalEntryEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+            if(model.JournalEntryId != id)
+            {
+                ModelState.AddModelError("", "Id does not match");
+                return View(model);
+            }
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new JournalEntryServices(userId);
+
+            if (service.UpdateEntry(model))
+            {
+                TempData["SaveResult"] = "Your journal entry was updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your entry could not be updated.");
+            return View(model);
+        }
+
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new JournalEntryServices(userId);
+
+            var model = service.GetEntryById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new JournalEntryServices(userId);
+
+            service.DeleteEntry(id);
+            return RedirectToAction("Index");
+        }
+
     }
 }

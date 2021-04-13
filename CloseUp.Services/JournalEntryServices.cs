@@ -91,5 +91,37 @@ namespace CloseUp.Services
                     };
             }
         }
+
+        public bool UpdateEntry (JournalEntryEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .JournalEntries
+                    .Single(x => x.JournalEntryId == model.JournalEntryId && x.UserId == _userId);
+
+                entity.Content = model.Content;
+                entity.PhotoUrl = model.PhotoUrl;
+                entity.IsPublic = model.IsPublic;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+        public bool DeleteEntry(int entryId)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .JournalEntries
+                    .Single(x => x.JournalEntryId == entryId && x.UserId == _userId);
+
+                ctx.JournalEntries.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
