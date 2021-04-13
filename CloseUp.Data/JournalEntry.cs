@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,11 +16,6 @@ namespace CloseUp.Data
         [Required]
         public Guid UserId { get; set; }
 
-
-        //user has option to choose prompt or write their own
-        //prompt string here ? or virtual object
-        public string Prompt { get; set; }
-
         [Required]
         public string Content { get; set; }
 
@@ -32,6 +28,10 @@ namespace CloseUp.Data
 
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
+
+        [ForeignKey("PromptItem")]
+        public int PromptId { get; set; }
+        public virtual PromptItem PromptItem { get; set; }
 
         //Reply here?
     }

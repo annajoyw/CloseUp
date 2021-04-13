@@ -22,7 +22,7 @@ namespace CloseUp.Services
                 new JournalEntry()
                 {
                     UserId = _userId,
-                    Prompt = model.Prompt,
+                    PromptId = model.PromptId,
                     Content = model.Content,
                     PhotoUrl = model.PhotoUrl,
                     IsPublic = model.IsPublic,
@@ -62,7 +62,7 @@ namespace CloseUp.Services
                         new JournalEntryListItem
                         {
                             JournalEntryId = e.JournalEntryId,
-                            Prompt = e.Prompt,
+                            PromptId = e.PromptId,
                             Content = e.Content,
                             PhotoUrl = e.PhotoUrl,
                             IsPublic = e.IsPublic,
@@ -84,7 +84,7 @@ namespace CloseUp.Services
                     new JournalEntryDetail
                     {
                         EntryId = entity.JournalEntryId,
-                        Prompt = entity.Prompt,
+                        PromptId = entity.PromptId,
                         Content = entity.Content,
                         PhotoUrl = entity.PhotoUrl,
                         IsPublic = entity.IsPublic,

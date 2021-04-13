@@ -12,7 +12,7 @@ namespace CloseUp.Models
     {
         public int JournalEntryId { get; set; }
 
-        public string Prompt { get; set; }
+        public int PromptId { get; set; }
 
 
         public string Content { get; set; }

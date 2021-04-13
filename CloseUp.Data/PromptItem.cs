@@ -14,12 +14,6 @@ namespace CloseUp.Data
         public int PromptId { get; set; }
 
         [Required]
-        public string Prompt { get; set; }
-
-        [ForeignKey("JournalEntry")]
-        public int JournalEntryId { get; set; }
-        public virtual JournalEntry JournalEntry { get; set; }
-
-        
+        public string Prompt { get; set; }        
     }
 }
