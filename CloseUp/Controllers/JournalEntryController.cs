@@ -49,7 +49,7 @@ namespace CloseUp.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult Details (int id)
+        public ActionResult Details(int id)
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new JournalEntryServices(userId);
@@ -70,7 +70,7 @@ namespace CloseUp.Controllers
             var model =
                 new JournalEntryEdit
                 {
-                    JournalEntryId = detail.EntryId,
+                    JournalEntryId = detail.JournalEntryId,
                     Content = detail.Content,
                     PhotoUrl = detail.PhotoUrl,
                     IsPublic = detail.IsPublic

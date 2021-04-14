@@ -15,6 +15,9 @@
             @Html.DisplayNameFor(model => model.JournalEntryId)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Prompt)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Content)
         </th>
         <th>
@@ -35,6 +38,9 @@
             @Html.DisplayFor(modelItem => item.JournalEntryId)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Prompt)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Content)
         </td>
         <td>
@@ -47,7 +53,7 @@
             @Html.DisplayFor(modelItem => item.CreatedUtc)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.JournalEntryId }) |
+            @Html.ActionLink("Edit", "Edit", new { id=item.JournalEntryId}) |
             @Html.ActionLink("Details", "Details", new { id=item.JournalEntryId }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.JournalEntryId })
         </td>

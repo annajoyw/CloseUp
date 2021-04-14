@@ -12,7 +12,9 @@ namespace CloseUp.Models
     {
         public int JournalEntryId { get; set; }
 
-        public int PromptId { get; set; }
+
+        [Display(Name = "Prompt")]
+        public string Prompt { get; set; }
 
 
         public string Content { get; set; }
@@ -24,7 +26,7 @@ namespace CloseUp.Models
         [Display(Name = "Public Post")]
         public bool IsPublic { get; set; }
 
-  
+        [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
     }
 }

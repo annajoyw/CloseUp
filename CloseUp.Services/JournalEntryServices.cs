@@ -62,7 +62,7 @@ namespace CloseUp.Services
                         new JournalEntryListItem
                         {
                             JournalEntryId = e.JournalEntryId,
-                            PromptId = e.PromptId,
+                            Prompt = e.PromptItem.Prompt,
                             Content = e.Content,
                             PhotoUrl = e.PhotoUrl,
                             IsPublic = e.IsPublic,
@@ -83,8 +83,8 @@ namespace CloseUp.Services
                 return
                     new JournalEntryDetail
                     {
-                        EntryId = entity.JournalEntryId,
-                        PromptId = entity.PromptId,
+                        JournalEntryId = entity.JournalEntryId,
+                        Prompt = entity.PromptItem.Prompt,
                         Content = entity.Content,
                         PhotoUrl = entity.PhotoUrl,
                         IsPublic = entity.IsPublic,

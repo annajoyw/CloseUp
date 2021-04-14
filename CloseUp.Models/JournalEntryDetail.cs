@@ -9,8 +9,8 @@ namespace CloseUp.Models
 {
     public class JournalEntryDetail
     {
-        public int EntryId { get; set; }
-        public int PromptId { get; set; }
+        public int JournalEntryId { get; set; }
+        public string Prompt { get; set; }
 
         public string Content { get; set; }
 
