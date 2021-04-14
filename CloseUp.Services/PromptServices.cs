@@ -49,5 +49,22 @@ namespace CloseUp.Services
                 return query.ToArray();
             }
         }
+
+        public PromptDetail GetPromptById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .Prompts
+                    .Single(x => x.PromptId == id);
+                return
+                    new PromptDetail
+                    {
+                        PromptId = entity.PromptId,
+                        Prompt = entity.Prompt,
+                    };
+            }
+        }
     }
 }
