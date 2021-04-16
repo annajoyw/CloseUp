@@ -37,5 +37,38 @@ namespace CloseUp.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Edit(int id)
+        {
+            var service = new PromptServices();
+
+            var prompt = service.GetPromptById(id);
+
+            var model =
+                new PromptEdit
+                {
+                    PromptId = prompt.PromptId,
+                    Prompt = prompt.Prompt
+                };
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(int id, PromptEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+            if(model.PromptId != id)
+            {
+                ModelState.AddModelError("", "Sorry, looks like we didn't find a Prompt with that Id.");
+                return View(model);
+            }
+            var service = new PromptServices();
+
+            if (service.UpdatePrompt(model))
+            {
+                return RedirectToAction("Index");
+            }
+            ModelState.AddModelError("", "Prompt could not be updated.");
+            return View(model);
+        }
     }
 }

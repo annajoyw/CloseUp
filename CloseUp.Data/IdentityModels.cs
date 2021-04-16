@@ -39,7 +39,7 @@ namespace CloseUp.Data
         public DbSet<JournalEntry> JournalEntries { get; set; }
         public DbSet<HelpResource> HelpResources { get; set; }
         public DbSet<Reply> Replies { get; set; }
-        public DbSet<PromptItem> Prompts { get; set; }
+        public DbSet<PromptItem> PromptItems { get; set; }
 
         
 

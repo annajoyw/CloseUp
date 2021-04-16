@@ -28,7 +28,7 @@ namespace CloseUp.Services
                 };
             using (var ctx = new ApplicationDbContext())
             {
-                ctx.Prompts.Add(entity);
+                ctx.PromptItems.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
         }
@@ -38,11 +38,12 @@ namespace CloseUp.Services
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
-                    ctx.Prompts
+                    ctx.PromptItems
                     .Select(
                         x =>
                         new PromptListItem
                         {
+                            PromptId = x.PromptId,
                             Prompt = x.Prompt
                         }
                         );
@@ -56,7 +57,7 @@ namespace CloseUp.Services
             {
                 var entity =
                     ctx
-                    .Prompts
+                    .PromptItems
                     .Single(x => x.PromptId == id);
                 return
                     new PromptDetail
@@ -66,5 +67,22 @@ namespace CloseUp.Services
                     };
             }
         }
+
+        public bool UpdatePrompt(PromptEdit model)
+        {
+            using(var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .PromptItems
+                    .Single(x => x.PromptId == model.PromptId);
+
+                entity.Prompt = model.Prompt;
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
+
     }
 }

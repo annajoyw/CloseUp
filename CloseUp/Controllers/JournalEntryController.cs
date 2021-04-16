@@ -85,7 +85,7 @@ namespace CloseUp.Controllers
             if (!ModelState.IsValid) return View(model);
             if(model.JournalEntryId != id)
             {
-                ModelState.AddModelError("", "Id does not match");
+                ModelState.AddModelError("", "Sorry, looks like we didn't find a Journal Entry with that Id.");
                 return View(model);
             }
             var userId = Guid.Parse(User.Identity.GetUserId());
