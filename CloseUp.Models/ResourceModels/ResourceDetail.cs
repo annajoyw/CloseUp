@@ -8,5 +8,10 @@ namespace CloseUp.Models
 {
     public class ResourceDetail
     {
+        public int ResourceId { get; set; }
+
+        public string Category { get; set; }
+
+        public string ResourceInfo { get; set; }
     }
 }
