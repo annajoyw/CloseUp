@@ -77,7 +77,7 @@ namespace CloseUp.Services
             }
         }
 
-        public bool DeleteNote(int id)
+        public bool DeleteResource(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
