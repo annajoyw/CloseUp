@@ -74,5 +74,26 @@ namespace CloseUp.Controllers
             ModelState.AddModelError("", "Resource could not be updated.");
             return View(model);
         }
+
+
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var service = new ResourceServices();
+
+            var model = service.GetResourceById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        public ActionResult DeleteResource(int id)
+        {
+            var service = new ResourceServices();
+
+            service.DeleteResource(id);
+            return RedirectToAction("Index");
+        }
     }
 }

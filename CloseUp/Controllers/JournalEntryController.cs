@@ -57,7 +57,6 @@ namespace CloseUp.Controllers
             var model = service.GetEntryById(id);
 
             return View(model);
-
         }
 
         public ActionResult Edit(int id)

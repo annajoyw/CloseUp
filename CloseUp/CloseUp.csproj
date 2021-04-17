@@ -248,6 +248,7 @@
     <Content Include="Views\HelpResources\Index.cshtml" />
     <Content Include="Views\HelpResources\Create.cshtml" />
     <Content Include="Views\HelpResources\Edit.cshtml" />
+    <Content Include="Views\HelpResources\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
