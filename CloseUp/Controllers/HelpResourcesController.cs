@@ -38,5 +38,41 @@ namespace CloseUp.Controllers
             ModelState.AddModelError("", "Resource could not be created.");
             return View(model);
         }
+
+        public ActionResult Edit(int id)
+        {
+            var service = new ResourceServices();
+
+            var detail = service.GetResourceById(id);
+            var model =
+                new ResourceEdit
+                {
+                    ResourceId = detail.ResourceId,
+                    ResourceInfo = detail.ResourceInfo
+                };
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Edit(int id, ResourceEdit model)
+        {
+            if (!ModelState.IsValid)
+                return View(model);
+            if(model.ResourceId != id)
+            {
+                ModelState.AddModelError("", "Sorry, looks like we didn't find a Resource with that Id.");
+                return View(model);
+            }
+
+            var service = new ResourceServices();
+
+            if (service.UpdateResource(model))
+            {
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Resource could not be updated.");
+            return View(model);
+        }
     }
 }
