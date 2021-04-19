@@ -10,6 +10,8 @@ namespace CloseUp.Data
 {
     public class PromptItem
     {
+        //possibly add category prop here , so we can match prompt to resources
+        //give enum of different types of prompts?
         [Key]
         public int PromptId { get; set; }
 

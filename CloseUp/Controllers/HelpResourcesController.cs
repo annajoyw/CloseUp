@@ -95,5 +95,7 @@ namespace CloseUp.Controllers
             service.DeleteResource(id);
             return RedirectToAction("Index");
         }
+
+
     }
 }
