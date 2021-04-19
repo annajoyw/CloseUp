@@ -15,6 +15,9 @@
             @Html.DisplayNameFor(model => model.PromptId)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.Category)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Prompt)
         </th>
         <th></th>
@@ -26,12 +29,15 @@
             @Html.DisplayFor(modelItem => item.PromptId)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.Category)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Prompt)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.PromptId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.PromptId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.PromptId })
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
         </td>
     </tr>
 }

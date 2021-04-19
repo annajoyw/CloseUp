@@ -11,5 +11,8 @@ namespace CloseUp.Models
     {
         [Required]
         public string Prompt { get; set; }
+
+        [Display (Name ="Category *optional*")]
+        public string Category { get; set; }
     }
 }

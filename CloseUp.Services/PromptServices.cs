@@ -24,6 +24,7 @@ namespace CloseUp.Services
             var entity =
                 new PromptItem()
                 {
+                    Category = model.Category,
                     Prompt = model.Prompt
                 };
             using (var ctx = new ApplicationDbContext())
@@ -44,6 +45,7 @@ namespace CloseUp.Services
                         new PromptListItem
                         {
                             PromptId = x.PromptId,
+                            Category = x.Category,
                             Prompt = x.Prompt
                         }
                         );
@@ -63,6 +65,7 @@ namespace CloseUp.Services
                     new PromptDetail
                     {
                         PromptId = entity.PromptId,
+                        Category = entity.Category,
                         Prompt = entity.Prompt,
                     };
             }
@@ -78,6 +81,7 @@ namespace CloseUp.Services
                     .Single(x => x.PromptId == model.PromptId);
 
                 entity.Prompt = model.Prompt;
+                entity.Category = model.Category;
 
                 return ctx.SaveChanges() == 1;
             }

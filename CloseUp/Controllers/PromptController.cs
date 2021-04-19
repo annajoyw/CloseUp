@@ -47,6 +47,7 @@ namespace CloseUp.Controllers
                 new PromptEdit
                 {
                     PromptId = prompt.PromptId,
+                    Category = prompt.Category,
                     Prompt = prompt.Prompt
                 };
             return View(model);

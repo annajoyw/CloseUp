@@ -11,6 +11,7 @@ namespace CloseUp.Models
     public class JournalEntryCreate
     {
         [Required]
+        [Display(Name = "ID")]
         public int PromptId { get; set; }
 
         [Required]

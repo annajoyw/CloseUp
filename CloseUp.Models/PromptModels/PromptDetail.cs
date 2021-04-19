@@ -9,6 +9,8 @@ namespace CloseUp.Models
     public class PromptDetail
     {
         public int PromptId { get; set; }
+
+        public string Category { get; set; }
         public string Prompt { get; set; }
     }
 }
