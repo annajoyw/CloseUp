@@ -65,6 +65,10 @@
     <Compile Include="Migrations\202104190300088_category.Designer.cs">
       <DependentUpon>202104190300088_category.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104210048387_virtualObject.cs" />
+    <Compile Include="Migrations\202104210048387_virtualObject.Designer.cs">
+      <DependentUpon>202104210048387_virtualObject.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PromptItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -80,6 +84,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104190300088_category.resx">
       <DependentUpon>202104190300088_category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104210048387_virtualObject.resx">
+      <DependentUpon>202104210048387_virtualObject.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

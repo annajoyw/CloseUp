@@ -11,8 +11,8 @@ namespace CloseUp.Models
     public class JournalEntryCreate
     {
         [Required]
-        [Display(Name = "ID")]
-        public int PromptId { get; set; }
+        [Display(Name = "Prompt")]
+        public string Prompt { get; set; }
 
         [Required]
         public string Content { get; set; }
@@ -23,6 +23,8 @@ namespace CloseUp.Models
         [Required]
         [Display(Name = "Make this entry public")]
         public bool IsPublic { get; set; }
+
+        public virtual PromptItem PromptItem { get; set; }
 
 
     }

@@ -15,6 +15,9 @@ namespace CloseUp.Data
 
         [Required]
         public Guid UserId { get; set; }
+        
+        [Required]
+        public string Prompt { get; set; }
 
         [Required]
         public string Content { get; set; }

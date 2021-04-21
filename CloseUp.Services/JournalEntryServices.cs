@@ -22,7 +22,7 @@ namespace CloseUp.Services
                 new JournalEntry()
                 {
                     UserId = _userId,
-                    PromptId = model.PromptId,
+                    Prompt = model.PromptItem.Prompt,
                     Content = model.Content,
                     PhotoUrl = model.PhotoUrl,
                     IsPublic = model.IsPublic,
