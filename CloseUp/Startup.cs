@@ -35,12 +35,17 @@ namespace CloseUp
                 //Here we create a Admin super user who will maintain the website                   
 
                 var user = new ApplicationUser();
-                user.UserName = "ajwillx";
                 user.Email = "arealjoyw@gmail.com";
 
                 string userPWD = "Password1!";
 
                 var chkUser = UserManager.Create(user, userPWD);
+
+                if (chkUser.Succeeded)
+                {
+                    var result1 = UserManager.AddToRole(user.Id, "Admin");
+
+                }
             }
         }
     }
