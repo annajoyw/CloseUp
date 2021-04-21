@@ -46,6 +46,9 @@ namespace CloseUp.Controllers
 
             service.CreateEntry(model);
 
+
+           //GetPrompt();
+
             return RedirectToAction("Index");
         }
 
@@ -123,5 +126,16 @@ namespace CloseUp.Controllers
             return RedirectToAction("Index");
         }
 
+        public PromptItem GetPrompt(int id)
+        {
+            var service = new PromptServices();
+
+            var model = service.GetPromptById(id);
+
+            return new PromptItem
+            {
+                Prompt = model.Prompt
+            };
+        }
     }
 }
