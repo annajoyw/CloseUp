@@ -64,8 +64,6 @@ namespace CloseUp.Services
                 return
                     new PromptDetail
                     {
-                        PromptId = entity.PromptId,
-                        Category = entity.Category,
                         Prompt = entity.Prompt,
                     };
             }

@@ -8,6 +8,25 @@ using System.Threading.Tasks;
 
 namespace CloseUp.Data
 {
+    public enum Tag
+    {
+        None,
+        Mindfulness,
+        [Display(Name = "Health and Wellness")]
+        HealthAndWellness,
+        [Display(Name = "LGBT+")]
+        LGBT,
+        BLM,
+        [Display(Name = "Anxiety and Depression")]
+        AnxietyAndDepression,
+        [Display(Name = "ADHD and ASD")]
+        AdhdAndAutism,
+        [Display(Name = "Substance Abuse")]
+        SubstanceAbuse,
+        [Display(Name = "Help Hotlines")]
+        Hotline,
+        Other
+    }
    public class JournalEntry
     {
         [Key]

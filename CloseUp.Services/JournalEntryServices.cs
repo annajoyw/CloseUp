@@ -3,6 +3,7 @@ using CloseUp.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,23 +19,28 @@ namespace CloseUp.Services
         }
         public bool CreateEntry(JournalEntryCreate model)
         {
+
             var entity =
-                new JournalEntry()
-                {
-                    UserId = _userId,
-                    Prompt = model.PromptItem.Prompt,
-                    Content = model.Content,
-                    PhotoUrl = model.PhotoUrl,
-                    IsPublic = model.IsPublic,
-                    CreatedUtc = DateTimeOffset.Now
-                };
+            new JournalEntry()
+            {
+                UserId = _userId,
+                //Prompt =
+                Content = model.Content,
+                PhotoUrl = model.PhotoUrl,
+                IsPublic = model.IsPublic,
+                CreatedUtc = DateTimeOffset.Now
+            };
+
             using (var ctx = new ApplicationDbContext())
             {
                 ctx.JournalEntries.Add(entity);
                 return ctx.SaveChanges() == 1;
             }
-        }
 
+
+
+        }
+    
         //public string SelectPrompt(string prompt)
         //{
         //    using (var ctx = new ApplicationDbContext())
@@ -123,5 +129,24 @@ namespace CloseUp.Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public PromptDetail GetPromptById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .PromptItems
+                    .Single(x => x.PromptId == id);
+                return
+                    new PromptDetail
+                    {
+                        Prompt = entity.Prompt,
+                    };
+            }
+        }
+
+     }
     }
-}
+
+

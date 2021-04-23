@@ -34,7 +34,7 @@ namespace CloseUp.Controllers
         //post create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(JournalEntryCreate model)
+        public ActionResult Create(JournalEntryCreate model, int id)
         {
             if (!ModelState.IsValid)
             {

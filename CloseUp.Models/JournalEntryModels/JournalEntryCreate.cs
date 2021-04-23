@@ -10,9 +10,11 @@ namespace CloseUp.Models
 {
     public class JournalEntryCreate
     {
+        public int PromptId { get; set; }
+
         [Required]
         [Display(Name = "Prompt")]
-        public string Prompt { get; set; }
+        public string Prompt { get;  }
 
         [Required]
         public string Content { get; set; }
