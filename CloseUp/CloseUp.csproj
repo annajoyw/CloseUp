@@ -186,6 +186,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\JournalIndex.css" />
     <Content Include="Content\MainCss.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -242,14 +243,14 @@
     <Content Include="Views\JournalEntry\Details.cshtml" />
     <Content Include="Views\JournalEntry\Edit.cshtml" />
     <Content Include="Views\JournalEntry\Delete.cshtml" />
-    <Content Include="Views\HelpResources\Index.cshtml" />
-    <Content Include="Views\HelpResources\Create.cshtml" />
     <Content Include="Views\HelpResources\Edit.cshtml" />
     <Content Include="Views\HelpResources\Delete.cshtml" />
     <Content Include="Views\Prompt\Index.cshtml" />
     <Content Include="Views\Prompt\Create.cshtml" />
     <Content Include="Views\Prompt\Edit.cshtml" />
     <Content Include="Views\JournalEntry\Create.cshtml" />
+    <Content Include="Views\HelpResources\Index.cshtml" />
+    <Content Include="Views\HelpResources\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

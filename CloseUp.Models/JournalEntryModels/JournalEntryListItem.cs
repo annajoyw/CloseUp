@@ -12,6 +12,7 @@ namespace CloseUp.Models
     {
         public int JournalEntryId { get; set; }
 
+        public Tag Tag { get; set; }
 
         [Display(Name = "Prompt")]
         public string Prompt { get; set; }

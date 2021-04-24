@@ -15,10 +15,10 @@
             @Html.DisplayNameFor(model => model.ResourceId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Category)
+            @Html.DisplayNameFor(model => model.ResourceInfo)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ResourceInfo)
+            @Html.DisplayNameFor(model => model.Tag)
         </th>
         <th></th>
     </tr>
@@ -29,15 +29,15 @@
             @Html.DisplayFor(modelItem => item.ResourceId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Category)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.ResourceInfo)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ResourceId }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ResourceId }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ResourceId })
+            @Html.DisplayFor(modelItem => item.Tag)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ResourceId}) |
+            @Html.ActionLink("Details", "Details", new { id = item.ResourceId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ResourceId })
         </td>
     </tr>
 }
