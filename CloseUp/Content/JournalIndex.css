@@ -1,7 +1,9 @@
 ﻿body {
-   
+    
 }
-
-table{
-    padding:20;
+.card{
+    margin: 20px;
+    background-color: white;
+    padding: 6px 8px 8px 6px;
+   
 }

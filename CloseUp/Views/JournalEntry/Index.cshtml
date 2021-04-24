@@ -38,35 +38,61 @@
 
     @foreach (var item in Model)
     {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.JournalEntryId)
-    </td>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.JournalEntryId)
+            </td>
 
-    <td>
-        @Html.DisplayFor(modelItem => item.Prompt)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Content)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.PhotoUrl)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.IsPublic)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.CreatedUtc)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Tag)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.JournalEntryId }) |
-        @Html.ActionLink("Details", "Details", new { id = item.JournalEntryId }) |
-        @Html.ActionLink("Delete", "Delete", new { id = item.JournalEntryId })
-    </td>
-</tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prompt)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Content)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PhotoUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPublic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreatedUtc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tag)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.JournalEntryId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.JournalEntryId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.JournalEntryId })
+            </td>
+        </tr>
     }
 
 </table>
+
+
+
+@foreach (var item in Model)
+{
+    <div class="card" style="width: auto;">
+        <div class="card-body">
+            <h5 class="card-title">
+                @Html.DisplayFor(modelItem => item.Prompt)
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+                Tag:
+                @Html.DisplayFor(modelItem => item.Tag)
+            </h6>
+            <p class="card-text">
+                @Html.DisplayFor(modelItem => item.Content)
+            </p>
+            @Html.ActionLink("Edit", "Edit", new { id = item.JournalEntryId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.JournalEntryId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.JournalEntryId })
+        </div>
+    </div>
+
+}
+
+
