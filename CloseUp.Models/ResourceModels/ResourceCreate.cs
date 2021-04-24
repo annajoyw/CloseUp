@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CloseUp.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -9,8 +10,7 @@ namespace CloseUp.Models
 {
     public class ResourceCreate
     {
-        [Required]
-        public string Category { get; set; }
+        public Tag Tag { get; set; }
 
         [Required]
         public string ResourceInfo { get; set; }

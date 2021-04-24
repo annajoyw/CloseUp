@@ -69,6 +69,14 @@
     <Compile Include="Migrations\202104210048387_virtualObject.Designer.cs">
       <DependentUpon>202104210048387_virtualObject.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104232131041_IDKanymore.cs" />
+    <Compile Include="Migrations\202104232131041_IDKanymore.Designer.cs">
+      <DependentUpon>202104232131041_IDKanymore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104240138527_newUpdate.cs" />
+    <Compile Include="Migrations\202104240138527_newUpdate.Designer.cs">
+      <DependentUpon>202104240138527_newUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PromptItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,6 +95,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104210048387_virtualObject.resx">
       <DependentUpon>202104210048387_virtualObject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104232131041_IDKanymore.resx">
+      <DependentUpon>202104232131041_IDKanymore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104240138527_newUpdate.resx">
+      <DependentUpon>202104240138527_newUpdate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

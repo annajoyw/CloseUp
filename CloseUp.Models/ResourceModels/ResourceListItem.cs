@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CloseUp.Data;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace CloseUp.Models
     {
         public int ResourceId { get; set; }
 
-        public string Category { get; set; }
+        public Tag Tag { get; set; }
 
         public string ResourceInfo { get; set; }
     }

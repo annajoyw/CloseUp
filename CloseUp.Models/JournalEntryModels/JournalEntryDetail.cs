@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CloseUp.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -19,6 +20,8 @@ namespace CloseUp.Models
 
         [Display(Name = "Public")]
         public bool IsPublic { get; set; }
+
+        public Tag Tag { get; set; }
 
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }

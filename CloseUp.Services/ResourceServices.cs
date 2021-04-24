@@ -15,7 +15,7 @@ namespace CloseUp.Services
             var entity =
                 new HelpResource()
                 {
-                    Category = model.Category,
+                    Tag = model.Tag,
                     ResourceInfo = model.ResourceInfo
                 };
             using (var ctx = new ApplicationDbContext())
@@ -36,7 +36,7 @@ namespace CloseUp.Services
                         x => new ResourceListItem
                         {
                             ResourceId = x.ResourceId,
-                            Category = x.Category,
+                            Tag = x.Tag,
                             ResourceInfo = x.ResourceInfo
                         }
                         );
@@ -56,7 +56,7 @@ namespace CloseUp.Services
                     new ResourceDetail
                     {
                         ResourceId = entity.ResourceId,
-                        Category = entity.Category,
+                        Tag = entity.Tag,
                         ResourceInfo = entity.ResourceInfo
                     };
             }
@@ -70,7 +70,7 @@ namespace CloseUp.Services
                     ctx
                     .HelpResources
                     .Single(x => x.ResourceId == model.ResourceId);
-                entity.Category = model.Category;
+                entity.Tag = model.Tag;
                 entity.ResourceInfo = model.ResourceInfo;
 
                 return ctx.SaveChanges() == 1;

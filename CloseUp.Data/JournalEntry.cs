@@ -35,7 +35,7 @@ namespace CloseUp.Data
         [Required]
         public Guid UserId { get; set; }
         
-        [Required]
+     
         public string Prompt { get; set; }
 
         [Required]
@@ -47,6 +47,8 @@ namespace CloseUp.Data
         [Required]
         [Display(Name = "Public Post")]
         public bool IsPublic { get; set; }
+
+        public Tag Tag { get; set; } = new Tag();
 
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }

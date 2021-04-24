@@ -13,20 +13,15 @@ namespace CloseUp.Models
         public int PromptId { get; set; }
 
         [Required]
-        [Display(Name = "Prompt")]
-        public string Prompt { get;  }
-
-        [Required]
         public string Content { get; set; }
 
         [Display(Name = "Photo URL(optional)")]
         public string PhotoUrl { get; set; }
 
-        [Required]
         [Display(Name = "Make this entry public")]
         public bool IsPublic { get; set; }
 
-        public virtual PromptItem PromptItem { get; set; }
+        public Tag Tag { get; set; }
 
 
     }

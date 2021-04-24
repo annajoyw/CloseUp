@@ -5,15 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CloseUp.Models
+namespace CloseUp.Models.JournalEntryModels
 {
-    public class JournalEntryEdit
+    public class PromptedEntryCreate
     {
-        public int JournalEntryId { get; set; }
+        public int PromptId { get; set; }
+        public string Prompt { get; set; }
         public string Content { get; set; }
         public string PhotoUrl { get; set; }
         public bool IsPublic { get; set; }
         public Tag Tag { get; set; }
-
     }
 }

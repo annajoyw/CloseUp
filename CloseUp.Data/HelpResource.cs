@@ -14,7 +14,7 @@ namespace CloseUp.Data
         public int ResourceId { get; set; }
 
         [Required]
-        public string Category { get; set; }
+        public Tag Tag { get; set; }
 
         [Required]
         [Display(Name = "Information")]

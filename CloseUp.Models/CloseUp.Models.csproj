@@ -58,6 +58,7 @@
     <Compile Include="JournalEntryModels\JournalEntryDetail.cs" />
     <Compile Include="JournalEntryModels\JournalEntryEdit.cs" />
     <Compile Include="JournalEntryModels\JournalEntryListItem.cs" />
+    <Compile Include="JournalEntryModels\PromptedEntryCreate.cs" />
     <Compile Include="PromptModels\PromptCreate.cs" />
     <Compile Include="PromptModels\PromptDetail.cs" />
     <Compile Include="PromptModels\PromptEdit.cs" />

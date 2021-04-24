@@ -26,15 +26,20 @@ namespace CloseUp.Controllers
         }
 
         //get create
-        public ActionResult Create()
+        public ActionResult Create(int id)
         {
-                return View();
+            var model =
+                new JournalEntryCreate
+                {
+                    PromptId = id
+                };
+                return View(model);
         }
 
         //post create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(JournalEntryCreate model, int id)
+        public ActionResult Create(JournalEntryCreate model)
         {
             if (!ModelState.IsValid)
             {
@@ -75,7 +80,8 @@ namespace CloseUp.Controllers
                     JournalEntryId = detail.JournalEntryId,
                     Content = detail.Content,
                     PhotoUrl = detail.PhotoUrl,
-                    IsPublic = detail.IsPublic
+                    IsPublic = detail.IsPublic,
+                    Tag = detail.Tag
                 };
             return View(model);
         }
