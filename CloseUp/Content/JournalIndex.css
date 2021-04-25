@@ -1,9 +1,13 @@
 ﻿body {
     
 }
-.card{
+.card {
     margin: 20px;
-    background-color: white;
+    background-color: #333333;
     padding: 6px 8px 8px 6px;
-   
+    border-radius: 5px;
+    color: #bababa;
+}
+.card-title{
+    font-weight:bold;
 }
