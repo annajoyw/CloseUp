@@ -1,4 +1,5 @@
-﻿@{
+﻿<link href="@Url.Content("~/Content/HomePage.css")" rel="stylesheet" type="text/css" />
+@{
     ViewBag.Title = "Home Page";
 }
 
@@ -10,20 +11,27 @@
 
 <div class="row">
     <div class="col-md-4">
-        <h2>My Journal</h2>
-        <p>
+        <h2 class="text">My Journal</h2>
+        <p class="text">
             View and manage your journal entries here. Please note you must be logged in to utilize.
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Go to Journal &raquo;</a></p>
+        <p class="text">
+            @Html.ActionLink("Journal Entries","Index","JournalEntry")
+        </p>
     </div>
     <div class="col-md-4">
-        <h2>Prompts</h2>
-        <p>View and answer pre-written prompts here. New features coming soon!</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Go to Prompts &raquo;</a></p>
+        <h2 class="text">Prompts</h2>
+        <p class="text">View and answer pre-written prompts here. New features coming soon!</p>
+        <p class="text">
+
+            @Html.ActionLink("Prompts", "Index", "Prompt")
+        </p>
     </div>
     <div class="col-md-4">
-        <h2>Resources</h2>
-        <p>If you're searching for resources on mental health and wellness, look here.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Go to Resources &raquo;</a></p>
+        <h2 class="text">Resources</h2>
+        <p class="text">If you're searching for resources on mental health and wellness, look here.</p>
+        <p class="text">
+            @Html.ActionLink("Help Resources", "Index", "HelpResources")
+        </p>
     </div>
 </div>
