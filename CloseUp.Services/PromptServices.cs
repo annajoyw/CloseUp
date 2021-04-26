@@ -85,6 +85,21 @@ namespace CloseUp.Services
             }
         }
 
+        public bool DeletePrompt(int promptId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                    .PromptItems
+                    .Single(x => x.PromptId == promptId);
+
+                ctx.PromptItems.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
+
 
     }
 }

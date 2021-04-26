@@ -71,5 +71,29 @@ namespace CloseUp.Controllers
             ModelState.AddModelError("", "Prompt could not be updated.");
             return View(model);
         }
+
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+         
+            var service = new PromptServices();
+
+            var model = service.GetPromptById(id);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeletePost(int id)
+        {
+ 
+            var service = new PromptServices();
+
+            service.DeletePrompt(id);
+            return RedirectToAction("Index");
+        }
+
     }
 }
