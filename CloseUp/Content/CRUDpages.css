@@ -1,0 +1,15 @@
+﻿body {
+}
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.form-horizontal{
+    background-color: #FFFDD0;
+    border-radius: 5px;
+    padding: 10px;
+}
+.dl-horizontal {
+    background-color: #FFFDD0;
+    border-radius: 5px;
+    padding: 10px;
+}
