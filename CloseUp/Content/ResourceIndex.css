@@ -1,2 +1,12 @@
 ﻿body {
+ 
+}
+.list-group {
+
+    margin: auto;
+    width: 50%;
+}
+.list-group-item {
+    background-color: #FFFDD0;
+    text-align: center;
 }

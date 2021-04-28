@@ -3,26 +3,25 @@
 @{
     ViewBag.Title = "Index";
 }
-
+<link href="@Url.Content("~/Content/ResourceIndex.css")" rel="stylesheet" type="text/css" />
 <h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
 
-
-<div class="links">
-    <h3>Want to see resources for a specific need?</h3>
+<h3>Want to see resources for a specific need?</h3>
+<div class="list-group">
     <ul>
-        <li><a href="https://localhost:44399/HelpResources/resourcebytag?tag=2">Mindfulness</a></li>
-        <li> <a href="https://localhost:44399/HelpResources/resourcebytag?tag=3">Health and Wellness</a> </li>
-        <li> <a href="https://localhost:44399/HelpResources/resourcebytag?tag=4">LGBT+</a> </li>
-        <li> <a href="https://localhost:44399/HelpResources/resourcebytag?tag=5">BLM</a> </li>
-        <li> <a href="https://localhost:44399/HelpResources/resourcebytag?tag=6">Anxiety/Depression</a> </li>
-        <li>  <a href="https://localhost:44399/HelpResources/resourcebytag?tag=7">ADHD/ASD</a></li>
-        <li>  <a href="https://localhost:44399/HelpResources/resourcebytag?tag=8">Substance Abuse</a> </li>
-        <li> <a href="https://localhost:44399/HelpResources/resourcebytag?tag=9">Hotlines</a></li>
-        <li> <a href="https://localhost:44399/HelpResources/resourcebytag?tag=10">Other</a></li>
+        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=2">Mindfulness</a></li>
+        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=3">Health and Wellness</a> </li>
+        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=4">LGBT+</a> </li>
+        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=5">BLM</a> </li>
+        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=6">Anxiety/Depression</a> </li>
+        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=7">ADHD/ASD</a></li>
+        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=8">Substance Abuse</a> </li>
+        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=9">Hotlines</a></li>
+        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=10">Other</a></li>
 
     </ul>
 </div>
@@ -41,23 +40,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.ResourceId)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.ResourceInfo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Tag)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ResourceId}) |
-            @Html.ActionLink("Details", "Details", new { id = item.ResourceId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.ResourceId })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResourceId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResourceInfo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tag)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ResourceId }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ResourceId }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ResourceId })
+            </td>
+        </tr>
+    }
 
 </table>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

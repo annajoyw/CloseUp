@@ -77,6 +77,10 @@
     <Compile Include="Migrations\202104240138527_newUpdate.Designer.cs">
       <DependentUpon>202104240138527_newUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104280706531_seedData.cs" />
+    <Compile Include="Migrations\202104280706531_seedData.Designer.cs">
+      <DependentUpon>202104280706531_seedData.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PromptItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -101,6 +105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104240138527_newUpdate.resx">
       <DependentUpon>202104240138527_newUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104280706531_seedData.resx">
+      <DependentUpon>202104280706531_seedData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
