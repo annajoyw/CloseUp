@@ -32,10 +32,16 @@ namespace CloseUp.Controllers
                 return View(model);
             }
             var service = new PromptServices();
-            service.CreatePrompt(model);
+            if (service.CreatePrompt(model))
+            {
+                TempData["SaveResult"] = "Your entry was created.";
+                return RedirectToAction("Index");
+            }
 
-            return RedirectToAction("Index");
+            ModelState.AddModelError("", "Prompt could not be created.");
+            return View(model);
         }
+
 
         public ActionResult Details(int id)
         {

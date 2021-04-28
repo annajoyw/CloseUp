@@ -49,12 +49,15 @@ namespace CloseUp.Controllers
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new JournalEntryServices(userId);
 
-            service.CreateEntry(model);
+            if (service.CreateEntry(model))
+            {
+                TempData["SaveResult"] = "Your entry was created.";
+                return RedirectToAction("Index");
+            }
 
-
-           //GetPrompt();
-
-            return RedirectToAction("Index");
+            ModelState.AddModelError("", "Resource could not be created.");
+            return View(model);
+            //GetPrompt();
         }
 
         public ActionResult Details(int id)
@@ -128,8 +131,13 @@ namespace CloseUp.Controllers
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new JournalEntryServices(userId);
 
-            service.DeleteEntry(id);
-            return RedirectToAction("Index");
+           if(service.DeleteEntry(id))
+            {
+                TempData["SaveResult"] = "Your journal entry was deleted.";
+                return RedirectToAction("Index");
+            }
+            ModelState.AddModelError("", "Your entry could not be deleted.");
+            return View();
         }
 
         public PromptItem GetPrompt(int id)

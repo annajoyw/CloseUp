@@ -4,11 +4,7 @@
     ViewBag.Title = "Index";
 }
 <link href="@Url.Content("~/Content/ResourceIndex.css")" rel="stylesheet" type="text/css" />
-<h2>Resource Index</h2>
-
-<p>
-    @Html.ActionLink("Create New Resource", "Create")
-</p>
+>
 
 <h3>Want to see resources for a specific need?</h3>
 <div class="list-group">
@@ -25,9 +21,23 @@
     </ul>
 </div>
 
-
 <br />
 
+<h2>Resource Index</h2>
+
+<p>
+    @Html.ActionLink("Create New Resource", "Create")
+</p>
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
 <br />
 
 <table class="table">
@@ -47,22 +57,22 @@
 
     @foreach (var item in Model)
     {
-<tr>
-    <td>
-        @Html.DisplayFor(modelItem => item.ResourceInfo)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.URL)
-    </td>
-    <td>
-        @Html.DisplayFor(modelItem => item.Tag)
-    </td>
-    <td>
-        @Html.ActionLink("Edit", "Edit", new { id = item.ResourceId })
-        @Html.ActionLink("Details", "Details", new { id = item.ResourceId })
-        @Html.ActionLink("Delete", "Delete", new { id = item.ResourceId })
-    </td>
-</tr>
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ResourceInfo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.URL)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tag)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ResourceId })
+                @Html.ActionLink("Details", "Details", new { id = item.ResourceId })
+                @Html.ActionLink("Delete", "Delete", new { id = item.ResourceId })
+            </td>
+        </tr>
     }
 
 </table>

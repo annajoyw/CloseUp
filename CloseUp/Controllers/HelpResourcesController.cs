@@ -40,6 +40,7 @@ namespace CloseUp.Controllers
 
             if (service.CreateResource(model))
             {
+                TempData["SaveResult"] = "Your resource was created.";
                 return RedirectToAction("Index");
             }
 
@@ -86,6 +87,7 @@ namespace CloseUp.Controllers
 
             if (service.UpdateResource(model))
             {
+                TempData["SaveResult"] = "Your resource has been updated.";
                 return RedirectToAction("Index");
             }
 
@@ -110,8 +112,14 @@ namespace CloseUp.Controllers
         {
             var service = new ResourceServices();
 
-            service.DeleteResource(id);
-            return RedirectToAction("Index");
+            if (service.DeleteResource(id))
+            {
+                TempData["SaveResult"] = "Resource has been deleted.";
+                return RedirectToAction("Index");
+            }
+            ModelState.AddModelError("", "Your entry could not be deleted.");
+            return View();
+
         }
 
 
