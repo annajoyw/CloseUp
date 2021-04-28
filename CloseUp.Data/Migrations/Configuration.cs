@@ -41,17 +41,17 @@ namespace CloseUp.Data.Migrations
 
             context.HelpResources.AddOrUpdate(
                 p => p.ResourceId,
-                new HelpResource() { ResourceId = 1, ResourceInfo = "What is Mindfulness? Heres a quick read to get a better idea of how Mindfulness and Meditation work. https://www.mindful.org/what-is-mindfulness/", Tag = Tag.Mindfulness },
-                new HelpResource() { ResourceId = 2, ResourceInfo = "Check out this site to read about the lates news invloving LGBT+ Community! https://www.mindful.org/what-is-mindfulness/", Tag = Tag.LGBT },
-                new HelpResource() { ResourceId = 3, ResourceInfo = "If you're feeling overwhelmed, it might be worth checking out the Trevor Project. This site is loaded with support. https://www.thetrevorproject.org/", Tag = Tag.LGBT },
-                new HelpResource() { ResourceId = 4, ResourceInfo = "Black Lives Matter official website https://blacklivesmatter.com/", Tag = Tag.BLM },
-                new HelpResource() { ResourceId = 5, ResourceInfo = "Black Lives Matter 2020 impact report https://blacklivesmatter.com/2020-impact-report/", Tag = Tag.BLM },
-                new HelpResource() { ResourceId = 6, ResourceInfo = "You can search for an anxiety/depression support group near you through ADAA's support group listing. https://adaa.org/supportgroups", Tag = Tag.AnxietyAndDepression },
-                new HelpResource() { ResourceId = 7, ResourceInfo = "Search here for a therapist licensed to help with anxiety, depression, OCD, PTSD, and related disorders https://members.adaa.org/page/FATMain", Tag = Tag.AnxietyAndDepression },
-                new HelpResource() { ResourceId = 8, ResourceInfo = "10 habits worth adopting into your life! https://health.clevelandclinic.org/11-simple-health-habits-worth-adopting-into-your-life/", Tag = Tag.HealthAndWellness },
-                new HelpResource() { ResourceId = 9, ResourceInfo = "Wondering if you have ADHD? This page offers a deeper look into adult ADHDhttps://www.nimh.nih.gov/health/publications/could-i-have-adhd/index.shtml?utm_source=NIMHwebsite&utm_medium=Portal&utm_campaign=shareNIMH", Tag = Tag.AdhdAndAutism },
-                new HelpResource() { ResourceId = 10, ResourceInfo = "Resources and Information regarding Autism Spectrum Disorder https://medlineplus.gov/autismspectrumdisorder.html", Tag = Tag.AdhdAndAutism},
-                new HelpResource() { ResourceId = 11, ResourceInfo = "SAMHSA’s National Helpline is a free, confidential, 24/7, 365-day-a-year treatment referral and information service for individuals facing mental and/or substance use disorders. https://www.samhsa.gov/find-help/national-helpline", Tag = Tag.SubstanceAbuse}
+                new HelpResource() { ResourceId = 1, ResourceInfo = "What is Mindfulness? Heres a quick read to get a better idea of how Mindfulness and Meditation work.", URL = "https://www.mindful.org/what-is-mindfulness/", Tag = Tag.Mindfulness },
+                new HelpResource() { ResourceId = 2, ResourceInfo = "Check out this site to read about the lates news invloving LGBT+ Community!", URL = "https://www.mindful.org/what-is-mindfulness/", Tag = Tag.LGBT },
+                new HelpResource() { ResourceId = 3, ResourceInfo = "If you're feeling overwhelmed, it might be worth checking out the Trevor Project. This site is loaded with support.", URL = "https://www.thetrevorproject.org/", Tag = Tag.LGBT },
+                new HelpResource() { ResourceId = 4, ResourceInfo = "Black Lives Matter official website", URL = "https://blacklivesmatter.com/", Tag = Tag.BLM },
+                new HelpResource() { ResourceId = 5, ResourceInfo = "Black Lives Matter 2020 impact report", URL = "https://blacklivesmatter.com/2020-impact-report/", Tag = Tag.BLM },
+                new HelpResource() { ResourceId = 6, ResourceInfo = "You can search for an anxiety/depression support group near you through ADAA's support group listing.", URL = "https://adaa.org/supportgroups", Tag = Tag.AnxietyAndDepression },
+                new HelpResource() { ResourceId = 7, ResourceInfo = "Search here for a therapist licensed to help with anxiety, depression, OCD, PTSD, and related disorders", URL = "https://members.adaa.org/page/FATMain", Tag = Tag.AnxietyAndDepression },
+                new HelpResource() { ResourceId = 8, ResourceInfo = "10 habits worth adopting into your life!", URL = "https://health.clevelandclinic.org/11-simple-health-habits-worth-adopting-into-your-life/", Tag = Tag.HealthAndWellness },
+                new HelpResource() { ResourceId = 9, ResourceInfo = "Wondering if you have ADHD? This page offers a deeper look into adult ADHD", URL = "https://www.nimh.nih.gov/health/publications/could-i-have-adhd/index.shtml?utm_source=NIMHwebsite&utm_medium=Portal&utm_campaign=shareNIMH", Tag = Tag.AdhdAndAutism },
+                new HelpResource() { ResourceId = 10, ResourceInfo = "Resources and Information regarding Autism Spectrum Disorder", URL = "https://medlineplus.gov/autismspectrumdisorder.html", Tag = Tag.AdhdAndAutism},
+                new HelpResource() { ResourceId = 11, ResourceInfo = "SAMHSA’s National Helpline is a free, confidential, 24/7, 365-day-a-year treatment referral and information service for individuals facing mental and/or substance use disorders.", URL = "https://www.samhsa.gov/find-help/national-helpline", Tag = Tag.SubstanceAbuse}
                 );
             
         }

@@ -19,5 +19,7 @@ namespace CloseUp.Data
         [Required]
         [Display(Name = "Information")]
         public string ResourceInfo { get; set; }
+
+        public string URL { get; set; }
     }
 }

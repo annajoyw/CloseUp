@@ -47,6 +47,15 @@ namespace CloseUp.Controllers
             return View(model);
         }
 
+        public ActionResult Details(int id)
+        {
+            var service = new ResourceServices();
+
+            var model = service.GetResourceById(id);
+
+            return View(model);
+        }
+
         public ActionResult Edit(int id)
         {
             var service = new ResourceServices();
@@ -56,7 +65,8 @@ namespace CloseUp.Controllers
                 new ResourceEdit
                 {
                     ResourceId = detail.ResourceId,
-                    ResourceInfo = detail.ResourceInfo
+                    ResourceInfo = detail.ResourceInfo,
+                    URL = detail.URL
                 };
             return View(model);
         }

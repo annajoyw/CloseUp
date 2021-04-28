@@ -37,6 +37,16 @@ namespace CloseUp.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Details(int id)
+        {
+            
+            var service = new PromptServices();
+
+            var model = service.GetPromptById(id);
+
+            return View(model);
+        }
+
         public ActionResult Edit(int id)
         {
             var service = new PromptServices();

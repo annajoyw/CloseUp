@@ -16,7 +16,8 @@ namespace CloseUp.Services
                 new HelpResource()
                 {
                     Tag = model.Tag,
-                    ResourceInfo = model.ResourceInfo
+                    ResourceInfo = model.ResourceInfo,
+                    URL = model.URL
                 };
             using (var ctx = new ApplicationDbContext())
             {
@@ -37,7 +38,8 @@ namespace CloseUp.Services
                         {
                             ResourceId = x.ResourceId,
                             Tag = x.Tag,
-                            ResourceInfo = x.ResourceInfo
+                            ResourceInfo = x.ResourceInfo,
+                            URL = x.URL
                         }
                         );
                 return query.ToArray();
@@ -57,7 +59,8 @@ namespace CloseUp.Services
                          {
                              ResourceId = x.ResourceId,
                              Tag = x.Tag,
-                             ResourceInfo = x.ResourceInfo
+                             ResourceInfo = x.ResourceInfo,
+                             URL = x.URL
                          }
                         );
                 return query.ToArray();
@@ -78,7 +81,8 @@ namespace CloseUp.Services
                     {
                         ResourceId = entity.ResourceId,
                         Tag = entity.Tag,
-                        ResourceInfo = entity.ResourceInfo
+                        ResourceInfo = entity.ResourceInfo,
+                        URL = entity.URL
                     };
             }
         }
@@ -93,6 +97,7 @@ namespace CloseUp.Services
                     .Single(x => x.ResourceId == model.ResourceId);
                 entity.Tag = model.Tag;
                 entity.ResourceInfo = model.ResourceInfo;
+                entity.URL = model.URL;
 
                 return ctx.SaveChanges() == 1;
             }

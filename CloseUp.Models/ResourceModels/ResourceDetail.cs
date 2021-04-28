@@ -14,5 +14,7 @@ namespace CloseUp.Models
         public Tag Tag { get; set; }
 
         public string ResourceInfo { get; set; }
+
+        public string URL { get; set; }
     }
 }

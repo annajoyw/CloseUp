@@ -81,6 +81,18 @@
     <Compile Include="Migrations\202104280706531_seedData.Designer.cs">
       <DependentUpon>202104280706531_seedData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202104280748390_url.cs" />
+    <Compile Include="Migrations\202104280748390_url.Designer.cs">
+      <DependentUpon>202104280748390_url.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104280757354_newSeedData.cs" />
+    <Compile Include="Migrations\202104280757354_newSeedData.Designer.cs">
+      <DependentUpon>202104280757354_newSeedData.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104280806334_updateOnemillion.cs" />
+    <Compile Include="Migrations\202104280806334_updateOnemillion.Designer.cs">
+      <DependentUpon>202104280806334_updateOnemillion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PromptItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,6 +120,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104280706531_seedData.resx">
       <DependentUpon>202104280706531_seedData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104280748390_url.resx">
+      <DependentUpon>202104280748390_url.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104280757354_newSeedData.resx">
+      <DependentUpon>202104280757354_newSeedData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104280806334_updateOnemillion.resx">
+      <DependentUpon>202104280806334_updateOnemillion.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

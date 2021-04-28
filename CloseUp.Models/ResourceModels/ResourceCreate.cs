@@ -14,5 +14,7 @@ namespace CloseUp.Models
 
         [Required]
         public string ResourceInfo { get; set; }
+
+        public string URL { get; set; }
     }
 }
