@@ -1,0 +1,39 @@
+﻿@model IEnumerable<CloseUp.Models.ResourceListItem>
+
+@{
+    ViewBag.Title = "ResourceByTag";
+}
+
+<h2>ResourceByTag</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ResourceId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResourceInfo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResourceId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResourceInfo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

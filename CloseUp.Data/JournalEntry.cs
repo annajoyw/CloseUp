@@ -10,7 +10,7 @@ namespace CloseUp.Data
 {
     public enum Tag
     {
-        None,
+        None = 1 ,
         Mindfulness,
         [Display(Name = "Health and Wellness")]
         HealthAndWellness,

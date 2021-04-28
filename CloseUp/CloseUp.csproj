@@ -248,7 +248,6 @@
     <Content Include="Views\JournalEntry\Edit.cshtml" />
     <Content Include="Views\JournalEntry\Delete.cshtml" />
     <Content Include="Views\HelpResources\Edit.cshtml" />
-    <Content Include="Views\HelpResources\Delete.cshtml" />
     <Content Include="Views\Prompt\Index.cshtml" />
     <Content Include="Views\Prompt\Create.cshtml" />
     <Content Include="Views\Prompt\Edit.cshtml" />
@@ -256,6 +255,8 @@
     <Content Include="Views\HelpResources\Index.cshtml" />
     <Content Include="Views\HelpResources\Create.cshtml" />
     <Content Include="Views\Prompt\Delete.cshtml" />
+    <Content Include="Views\HelpResources\Delete.cshtml" />
+    <Content Include="Views\HelpResources\ResourceByTag.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

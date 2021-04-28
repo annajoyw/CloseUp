@@ -1,5 +1,5 @@
 ﻿@model CloseUp.Models.ResourceDetail
-<link href="@Url.Content("~/Content/CRUDpages.css")" rel="stylesheet" type="text/css" />
+
 @{
     ViewBag.Title = "Delete";
 }
@@ -20,14 +20,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Category)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Category)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.ResourceInfo)
         </dt>
 
@@ -36,6 +28,7 @@
         </dd>
 
     </dl>
+    
 
     @using (Html.BeginForm()) {
         @Html.AntiForgeryToken()

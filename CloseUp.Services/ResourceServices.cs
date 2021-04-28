@@ -44,6 +44,27 @@ namespace CloseUp.Services
             }
         }
 
+        public IEnumerable<ResourceListItem> GetResourcesByTag(Tag tag)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .HelpResources
+                    .Where(x=> x.Tag == tag)
+                    .Select(
+                         x => new ResourceListItem
+                         {
+                             ResourceId = x.ResourceId,
+                             Tag = x.Tag,
+                             ResourceInfo = x.ResourceInfo
+                         }
+                        );
+                return query.ToArray();
+
+            }
+        }
+
         public ResourceDetail GetResourceById(int id)
         {
             using (var ctx = new ApplicationDbContext())

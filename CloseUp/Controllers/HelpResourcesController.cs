@@ -1,4 +1,5 @@
-﻿using CloseUp.Models;
+﻿using CloseUp.Data;
+using CloseUp.Models;
 using CloseUp.Services;
 using System;
 using System.Collections.Generic;
@@ -15,6 +16,13 @@ namespace CloseUp.Controllers
         {
             var service = new ResourceServices();
             var model = service.GetResources();
+            return View(model);
+        }
+
+        public ActionResult ResourceByTag(Tag tag)
+        {
+            var service = new ResourceServices();
+            var model = service.GetResourcesByTag(tag);
             return View(model);
         }
 

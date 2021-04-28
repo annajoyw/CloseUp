@@ -1,5 +1,5 @@
 ﻿@model IEnumerable<CloseUp.Models.ResourceListItem>
-
+@using CloseUp.Models
 @{
     ViewBag.Title = "Index";
 }
@@ -9,6 +9,24 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+
+<div class="links">
+    <h3>Want to see resources for a specific need?</h3>
+    <ul>
+        <li><a href="https://localhost:44399/HelpResources/resourcebytag?tag=2">Mindfulness</a></li>
+        <li> <a href="https://localhost:44399/HelpResources/resourcebytag?tag=3">Health and Wellness</a> </li>
+        <li> <a href="https://localhost:44399/HelpResources/resourcebytag?tag=4">LGBT+</a> </li>
+        <li> <a href="https://localhost:44399/HelpResources/resourcebytag?tag=5">BLM</a> </li>
+        <li> <a href="https://localhost:44399/HelpResources/resourcebytag?tag=6">Anxiety/Depression</a> </li>
+        <li>  <a href="https://localhost:44399/HelpResources/resourcebytag?tag=7">ADHD/ASD</a></li>
+        <li>  <a href="https://localhost:44399/HelpResources/resourcebytag?tag=8">Substance Abuse</a> </li>
+        <li> <a href="https://localhost:44399/HelpResources/resourcebytag?tag=9">Hotlines</a></li>
+        <li> <a href="https://localhost:44399/HelpResources/resourcebytag?tag=10">Other</a></li>
+
+    </ul>
+</div>
+
 <table class="table">
     <tr>
         <th>
