@@ -4,10 +4,10 @@
     ViewBag.Title = "Index";
 }
 <link href="@Url.Content("~/Content/ResourceIndex.css")" rel="stylesheet" type="text/css" />
-<h2>Index</h2>
+<h2>Resource Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New Resource", "Create")
 </p>
 
 <h3>Want to see resources for a specific need?</h3>
@@ -20,7 +20,6 @@
         <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=6">Anxiety/Depression</a> </li>
         <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=7">ADHD/ASD</a></li>
         <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=8">Substance Abuse</a> </li>
-        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=9">Hotlines</a></li>
         <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=10">Other</a></li>
 
     </ul>
@@ -28,9 +27,7 @@
 
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.ResourceId)
-        </th>
+        
         <th>
             @Html.DisplayNameFor(model => model.ResourceInfo)
         </th>
@@ -43,9 +40,6 @@
     @foreach (var item in Model)
     {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ResourceId)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.ResourceInfo)
             </td>
