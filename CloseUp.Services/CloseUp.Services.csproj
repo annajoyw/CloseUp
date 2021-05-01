@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PublicPostServices.cs" />
     <Compile Include="ResourceServices.cs" />
     <Compile Include="JournalEntryServices.cs" />
     <Compile Include="PromptServices.cs" />
