@@ -15,4 +15,5 @@ Joy Journal is still in production, and more features will be added soon!
 - Azure
 - Microsoft Visual Studio
 - [Tutorials Teacher](https://www.tutorialsteacher.com/mvc/viewbag-in-asp.net-mvc)
-- My wonderful classmates/teachers/learning assistants
+- [W3Schools](https://www.w3schools.com/css/)
+- Wonderful amazing classmates/teachers/learning assistants
