@@ -5,7 +5,7 @@ Joy Journal is an MVC built to help connect users to each other and their feelin
 ## Features Overview
 Joy Journal is still in production, and more features will be added soon!
 ### 1. Journal Entry Controller
-- Create, Read, Update, and Delete Journal Entry
+- Create, Read, Update, Delete, and view public Journal Entry
 ### 2. Prompt Controller
 - Create, Read, Update, Delete, and Answer Prompt
 ### 3. Help Resource Controller
