@@ -1,25 +1,30 @@
 ﻿@model IEnumerable<CloseUp.Models.ResourceListItem>
 @using CloseUp.Models
+@using CloseUp.Data
 @{
     ViewBag.Title = "Index";
 }
 <link href="@Url.Content("~/Content/ResourceIndex.css")" rel="stylesheet" type="text/css" />
 >
 
-<h3>Want to see resources for a specific need?</h3>
-<div class="list-group">
-    <ul>
-        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=2">Mindfulness</a></li>
-        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=3">Health and Wellness</a> </li>
-        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=4">LGBT+</a> </li>
-        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=5">BLM</a> </li>
-        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=6">Anxiety/Depression</a> </li>
-        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=7">ADHD/ASD</a></li>
-        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=8">Substance Abuse</a> </li>
-        <li class="list-group-item"><a href="https://localhost:44399/HelpResources/resourcebytag?tag=10">Other</a></li>
 
-    </ul>
-</div>
+
+    <h3>Want to see resources for a specific need?</h3>
+    <div class="list-group">
+
+        <ul>
+            <li class="list-group-item"> @Html.ActionLink("Mindfulness", "ResourceByTag", "HelpResources", new { tag = Tag.Mindfulness }, new { }) </li>
+            <li class="list-group-item"> @Html.ActionLink("Health and Wellness", "ResourceByTag", "HelpResources", new { tag = Tag.HealthAndWellness }, new { }) </li>
+            <li class="list-group-item"> @Html.ActionLink("LGBT+", "ResourceByTag", "HelpResources", new { tag = Tag.LGBT }, new { }) </li>
+            <li class="list-group-item"> @Html.ActionLink("BLM", "ResourceByTag", "HelpResources", new { tag = Tag.BLM }, new { }) </li> 
+            <li class="list-group-item"> @Html.ActionLink("Anxiety/Depression", "ResourceByTag", "HelpResources", new { tag = Tag.AnxietyAndDepression }, new { }) </li>
+            <li class="list-group-item"> @Html.ActionLink("ADHD/ASD", "ResourceByTag", "HelpResources", new { tag = Tag.AdhdAndAutism }, new { }) </li>
+            <li class="list-group-item"> @Html.ActionLink("Substance Abuse", "ResourceByTag", "HelpResources", new { tag = Tag.SubstanceAbuse }, new { })</li>
+            <li class="list-group-item"> @Html.ActionLink("Other", "ResourceByTag", "HelpResources", new { tag = Tag.Other }, new { }) </li>
+
+        </ul>
+    </div>
+
 
 <br />
 

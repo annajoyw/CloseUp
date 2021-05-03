@@ -1,4 +1,6 @@
 ﻿@model IEnumerable<CloseUp.Models.JournalEntryListItem>
+@using CloseUp.Models
+@using CloseUp.Data
 
 <link href="@Url.Content("~/Content/JournalIndex.css")" rel="stylesheet" type="text/css" />
 @{
@@ -9,10 +11,10 @@
 
 
 
-    <p>
-        @Html.ActionLink("Create New", "Index", "Prompt") |
-        <a href="https://localhost:44399/JournalEntry/PublicJournalEntries?publicpost=1">Browse</a>
-    </p>
+<p>
+    @Html.ActionLink("Create New", "Index", "Prompt") |
+    @Html.ActionLink("Browse Public Entries", "PublicJournalEntries", "JournalEntry", new { publicPost = PublicOrPrivate.Public}, new { })
+</p>
 
 
 
