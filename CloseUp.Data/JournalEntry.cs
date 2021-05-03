@@ -30,7 +30,7 @@ namespace CloseUp.Data
 
     public enum PublicOrPrivate
     {
-        Public,
+        Public = 1,
         Private
     }
     public class JournalEntry

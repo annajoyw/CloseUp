@@ -2,6 +2,7 @@
 using CloseUp.Models;
 using CloseUp.Services;
 using Microsoft.AspNet.Identity;
+
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -24,6 +25,17 @@ namespace CloseUp.Controllers
 
             return View(model);
         }
+
+        //get publicposts
+        public ActionResult PublicJournalEntries(PublicOrPrivate publicPost)
+        {
+            var service = new PublicPostServices();
+
+            var model = service.GetPublicPosts(publicPost);
+
+            return View(model);
+        }
+
 
         //get create
         public ActionResult Create(int id)

@@ -82,7 +82,32 @@ namespace CloseUp.Services
                 }
             }
 
-            public JournalEntryDetail GetEntryById(int id)
+        public IEnumerable<JournalEntryListItem> GetPublicPosts(PublicOrPrivate publicPost)
+        {
+
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .JournalEntries
+                    .Where(x => x.PublicOrPrivate == publicPost)
+                    .Select(
+                         x => new JournalEntryListItem
+                         {
+
+                             Tag = x.Tag,
+                             Prompt = x.Prompt,
+                             Content = x.Content,
+                             PhotoUrl = x.PhotoUrl,
+                             CreatedUtc = x.CreatedUtc
+                         }
+                        );
+                return query.ToArray();
+
+            }
+        }
+
+        public JournalEntryDetail GetEntryById(int id)
             {
                 using (var ctx = new ApplicationDbContext())
                 {

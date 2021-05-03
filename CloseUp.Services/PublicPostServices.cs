@@ -10,14 +10,15 @@ namespace CloseUp.Services
 {
     public class PublicPostServices
     {
-        public IEnumerable<JournalEntryListItem> GetPublicPosts()
+        public IEnumerable<JournalEntryListItem> GetPublicPosts(PublicOrPrivate publicPost)
         {
+            
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
                     .JournalEntries
-                    .Where(x => x.PublicOrPrivate == 0)
+                    .Where(x => x.PublicOrPrivate == publicPost)
                     .Select(
                          x => new JournalEntryListItem
                          {

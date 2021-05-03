@@ -1,4 +1,5 @@
-﻿using CloseUp.Services;
+﻿using CloseUp.Data;
+using CloseUp.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +13,12 @@ namespace CloseUp.Controllers
 
         [HttpGet]
         
-        public ActionResult Index() 
+        public ActionResult Index(PublicOrPrivate publicPost) 
         {
 
             var service = new PublicPostServices();
 
-            var model = service.GetPublicPosts();
+            var model = service.GetPublicPosts(publicPost);
 
             return View(model);
         }
