@@ -13,7 +13,7 @@ namespace CloseUp.Models.JournalEntryModels
         public string Prompt { get; set; }
         public string Content { get; set; }
         public string PhotoUrl { get; set; }
-        public bool IsPublic { get; set; }
+        public PublicOrPrivate PublicOrPrivate { get; set; }
         public Tag Tag { get; set; }
     }
 }

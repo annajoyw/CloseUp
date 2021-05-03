@@ -10,14 +10,14 @@ namespace CloseUp.Services
 {
     public class PublicPostServices
     {
-        public IEnumerable<JournalEntryListItem> GetPublicPosts(bool isPublic)
+        public IEnumerable<JournalEntryListItem> GetPublicPosts()
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
                     .JournalEntries
-                    .Where(x => x.IsPublic == isPublic)
+                    .Where(x => x.PublicOrPrivate == 0)
                     .Select(
                          x => new JournalEntryListItem
                          {
@@ -33,5 +33,7 @@ namespace CloseUp.Services
 
             }
         }
+
+        
     }
 }

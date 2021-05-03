@@ -12,7 +12,7 @@ namespace CloseUp.Models
         public int JournalEntryId { get; set; }
         public string Content { get; set; }
         public string PhotoUrl { get; set; }
-        public bool IsPublic { get; set; }
+        public PublicOrPrivate PublicOrPrivate { get; set; }
         public Tag Tag { get; set; }
 
     }

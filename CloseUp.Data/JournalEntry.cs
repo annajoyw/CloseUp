@@ -27,15 +27,21 @@ namespace CloseUp.Data
         Hotline,
         Other
     }
-   public class JournalEntry
+
+    public enum PublicOrPrivate
+    {
+        Public,
+        Private
+    }
+    public class JournalEntry
     {
         [Key]
         public int JournalEntryId { get; set; }
 
         [Required]
         public Guid UserId { get; set; }
-        
-     
+
+
         public string Prompt { get; set; }
 
         [Required]
@@ -46,7 +52,7 @@ namespace CloseUp.Data
 
         [Required]
         [Display(Name = "Public Post")]
-        public bool IsPublic { get; set; }
+        public PublicOrPrivate PublicOrPrivate { get; set; } = new PublicOrPrivate();
 
         public Tag Tag { get; set; } = new Tag();
 

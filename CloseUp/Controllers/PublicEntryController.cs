@@ -9,12 +9,15 @@ namespace CloseUp.Controllers
 {
     public class PublicEntryController : Controller
     {
-        // GET: PublicEntry
-        public ActionResult Index(bool isPublic)
+
+        [HttpGet]
+        
+        public ActionResult Index() 
         {
+
             var service = new PublicPostServices();
 
-            var model = service.GetPublicPosts(isPublic);
+            var model = service.GetPublicPosts();
 
             return View(model);
         }

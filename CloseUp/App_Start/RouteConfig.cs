@@ -18,6 +18,12 @@ namespace CloseUp
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            routes.MapRoute(
+                name: "publicposts",
+                url: "PublicEntry/publicPost/{isPublic}",
+                defaults: new { controller = "PublicEntry", action = "Index", isPublic = true}
+                );
         }
     }
 }

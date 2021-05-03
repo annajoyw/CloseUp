@@ -44,12 +44,11 @@
     </div>
 
     <div class="form-group">
-        @Html.LabelFor(model => model.IsPublic, htmlAttributes: new { @class = "control-label col-md-2" })
+        @Html.LabelFor(model => model.PublicOrPrivate, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            <div class="checkbox">
-                @Html.EditorFor(model => model.IsPublic)
-                @Html.ValidationMessageFor(model => model.IsPublic, "", new { @class = "text-danger" })
-            </div>
+            @Html.DropDownListFor(model => model.PublicOrPrivate, new SelectList(Enum.GetValues(typeof(PublicOrPrivate))), new
+             { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.PublicOrPrivate, "", new { @class = "text-danger" })
         </div>
     </div>
 

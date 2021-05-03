@@ -28,7 +28,7 @@ namespace CloseUp.Services
                     PromptId = model.PromptId,
                     Content = model.Content,
                     PhotoUrl = model.PhotoUrl,
-                    IsPublic = model.IsPublic,
+                    PublicOrPrivate = model.PublicOrPrivate,
                     Tag = model.Tag,
                     CreatedUtc = DateTimeOffset.Now
                 };
@@ -73,7 +73,8 @@ namespace CloseUp.Services
                                 Prompt = e.PromptItem.Prompt,
                                 Content = e.Content,
                                 PhotoUrl = e.PhotoUrl,
-                                IsPublic = e.IsPublic,
+                                Tag = e.Tag,
+                                PublicOrPrivate = e.PublicOrPrivate,
                                 CreatedUtc = e.CreatedUtc
                             }
                             );
@@ -95,7 +96,8 @@ namespace CloseUp.Services
                             Prompt = entity.PromptItem.Prompt,
                             Content = entity.Content,
                             PhotoUrl = entity.PhotoUrl,
-                            IsPublic = entity.IsPublic,
+                            Tag = entity.Tag,
+                            PublicOrPrivate = entity.PublicOrPrivate
                         };
                 }
             }
@@ -111,7 +113,7 @@ namespace CloseUp.Services
 
                     entity.Content = model.Content;
                     entity.PhotoUrl = model.PhotoUrl;
-                    entity.IsPublic = model.IsPublic;
+                entity.PublicOrPrivate = model.PublicOrPrivate;
                     entity.Tag = model.Tag;
 
                     return ctx.SaveChanges() == 1;

@@ -25,7 +25,7 @@ namespace CloseUp.Models
 
 
         [Display(Name = "Public Post")]
-        public bool IsPublic { get; set; }
+        public PublicOrPrivate PublicOrPrivate { get; set; }
 
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }

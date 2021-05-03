@@ -19,7 +19,7 @@ namespace CloseUp.Models
         public string PhotoUrl { get; set; }
 
         [Display(Name = "Public")]
-        public bool IsPublic { get; set; }
+        public PublicOrPrivate PublicOrPrivate { get; set; }
 
         public Tag Tag { get; set; }
 

@@ -83,7 +83,7 @@ namespace CloseUp.Controllers
                     JournalEntryId = detail.JournalEntryId,
                     Content = detail.Content,
                     PhotoUrl = detail.PhotoUrl,
-                    IsPublic = detail.IsPublic,
+                    PublicOrPrivate = detail.PublicOrPrivate,
                     Tag = detail.Tag
                 };
             return View(model);
