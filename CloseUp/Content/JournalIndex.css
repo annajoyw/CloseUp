@@ -4,9 +4,9 @@
 .card {
     margin: 20px;
     background-color: #FFFDD0;
+  
     padding: 6px 8px 8px 6px;
     border-radius: 5px;
-   
 }
 .card-title{
     font-weight:bold;
@@ -16,4 +16,10 @@
 }
 p{
     font-size: large;
+}
+.head {
+    padding: 5px;
+   text-align: center;
+    background-color: rgba(255, 253, 208, 0.7);
+    border-radius: 5px;
 }

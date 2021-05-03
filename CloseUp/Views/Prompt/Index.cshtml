@@ -3,12 +3,16 @@
 @{
     ViewBag.Title = "Index";
 }
+<div class="head">
+    <h2>Prompt Index</h2>
 
-<h2>Prompt Index</h2>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+</div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+<br />
+
 @if (TempData.ContainsKey("SaveResult"))
 {
     <div class="alert alert-success fade in" role="alert">

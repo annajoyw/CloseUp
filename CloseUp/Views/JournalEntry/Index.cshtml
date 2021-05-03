@@ -7,14 +7,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Journal Entries</h2>
+<div class="head">
+    <p>
+        <h2>Journal Entries</h2>@Html.ActionLink("Create New", "Index", "Prompt") |
+        @Html.ActionLink("Browse Public Entries", "PublicJournalEntries", "JournalEntry", new { publicPost = PublicOrPrivate.Public }, new { })
+    </p>
+</div>
 
-
-
-<p>
-    @Html.ActionLink("Create New", "Index", "Prompt") |
-    @Html.ActionLink("Browse Public Entries", "PublicJournalEntries", "JournalEntry", new { publicPost = PublicOrPrivate.Public}, new { })
-</p>
 
 
 

@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using CloseUp.Models
+@using CloseUp.Data
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -26,7 +28,7 @@
                     <li>@Html.ActionLink("My Journal", "Index", "JournalEntry")</li>
                     <li>@Html.ActionLink("Prompts", "Index", "Prompt")</li>
                     <li>@Html.ActionLink("Help Resources", "Index", "HelpResources")</li>
-                    <li>@Html.ActionLink("Browse", "Index", "PublicEntry")</li>
+                    <li>@Html.ActionLink("Browse", "PublicJournalEntries", "JournalEntry", new { publicPost = PublicOrPrivate.Public }, new { })</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
