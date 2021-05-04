@@ -13,3 +13,9 @@
     border-radius: 5px;
     padding: 10px;
 }
+.head {
+    padding: 5px;
+   
+    background-color: rgba(255, 253, 208, 0.7);
+    border-radius: 5px;
+}

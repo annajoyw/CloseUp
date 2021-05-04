@@ -24,7 +24,7 @@ namespace CloseUp.Services
                          {
                              
                              Tag = x.Tag,
-                             Prompt = x.Prompt,
+                             Prompt = x.PromptItem.Prompt,
                              Content = x.Content,
                              PhotoUrl = x.PhotoUrl,
                              CreatedUtc = x.CreatedUtc

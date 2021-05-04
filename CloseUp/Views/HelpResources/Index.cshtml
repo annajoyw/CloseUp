@@ -8,31 +8,35 @@
 >
 
 
+<h3>Want to see resources for a specific need?</h3>
 
-    <h3>Want to see resources for a specific need?</h3>
-    <div class="list-group">
+    
+<div class="list-group">
+ 
+    <ul>
+        <li class="list-group-item"> @Html.ActionLink("Mindfulness", "ResourceByTag", "HelpResources", new { tag = Tag.Mindfulness }, new { }) </li>
+        <li class="list-group-item"> @Html.ActionLink("Health and Wellness", "ResourceByTag", "HelpResources", new { tag = Tag.HealthAndWellness }, new { }) </li>
+        <li class="list-group-item"> @Html.ActionLink("LGBT+", "ResourceByTag", "HelpResources", new { tag = Tag.LGBT }, new { }) </li>
+        <li class="list-group-item"> @Html.ActionLink("BLM", "ResourceByTag", "HelpResources", new { tag = Tag.BLM }, new { }) </li>
+        <li class="list-group-item"> @Html.ActionLink("Anxiety/Depression", "ResourceByTag", "HelpResources", new { tag = Tag.AnxietyAndDepression }, new { }) </li>
+        <li class="list-group-item"> @Html.ActionLink("ADHD/ASD", "ResourceByTag", "HelpResources", new { tag = Tag.AdhdAndAutism }, new { }) </li>
+        <li class="list-group-item"> @Html.ActionLink("Substance Abuse", "ResourceByTag", "HelpResources", new { tag = Tag.SubstanceAbuse }, new { })</li>
+        <li class="list-group-item"> @Html.ActionLink("Other", "ResourceByTag", "HelpResources", new { tag = Tag.Other }, new { }) </li>
 
-        <ul>
-            <li class="list-group-item"> @Html.ActionLink("Mindfulness", "ResourceByTag", "HelpResources", new { tag = Tag.Mindfulness }, new { }) </li>
-            <li class="list-group-item"> @Html.ActionLink("Health and Wellness", "ResourceByTag", "HelpResources", new { tag = Tag.HealthAndWellness }, new { }) </li>
-            <li class="list-group-item"> @Html.ActionLink("LGBT+", "ResourceByTag", "HelpResources", new { tag = Tag.LGBT }, new { }) </li>
-            <li class="list-group-item"> @Html.ActionLink("BLM", "ResourceByTag", "HelpResources", new { tag = Tag.BLM }, new { }) </li> 
-            <li class="list-group-item"> @Html.ActionLink("Anxiety/Depression", "ResourceByTag", "HelpResources", new { tag = Tag.AnxietyAndDepression }, new { }) </li>
-            <li class="list-group-item"> @Html.ActionLink("ADHD/ASD", "ResourceByTag", "HelpResources", new { tag = Tag.AdhdAndAutism }, new { }) </li>
-            <li class="list-group-item"> @Html.ActionLink("Substance Abuse", "ResourceByTag", "HelpResources", new { tag = Tag.SubstanceAbuse }, new { })</li>
-            <li class="list-group-item"> @Html.ActionLink("Other", "ResourceByTag", "HelpResources", new { tag = Tag.Other }, new { }) </li>
-
-        </ul>
-    </div>
+    </ul>
+</div>
 
 
 <br />
 
-<h2>Resource Index</h2>
+<div class="head">
+    <h2>Resource Index</h2>
 
-<p>
-    @Html.ActionLink("Create New Resource", "Create")
-</p>
+    <p>
+        @Html.ActionLink("Create New Resource", "Create")
+    </p>
+</div>
+
 @if (TempData.ContainsKey("SaveResult"))
 {
     <div class="alert alert-success fade in" role="alert">

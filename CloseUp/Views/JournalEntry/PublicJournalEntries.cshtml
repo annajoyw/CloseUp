@@ -4,33 +4,35 @@
     ViewBag.Title = "PublicJournalEntries";
 }
 
-<h2>Public Journal Entries</h2>
+<div class="head">
+    <h2>Public Journal Entries</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+    <p>
+        @Html.ActionLink("Create New", "Index", "Prompt")
+    </p>
+</div>
 
+    @foreach (var item in Model)
+    {
+        <div class="card" style="width: auto;">
+            <div class="card-body">
+                <h5 class="card-title">
+                    @Html.DisplayFor(modelItem => item.Prompt)
+                </h5>
+                <h6 class="card-subtitle mb-2 text-muted">
+                    Tag:
+                    @Html.DisplayFor(modelItem => item.Tag) |
+                    @Html.DisplayFor(modelItem => item.CreatedUtc) |
+                    @Html.DisplayFor(modelItem => item.PublicOrPrivate)
 
-@foreach (var item in Model)
-{
-    <div class="card" style="width: auto;">
-        <div class="card-body">
-            <h5 class="card-title">
-                @Html.DisplayFor(modelItem => item.Prompt)
-            </h5>
-            <h6 class="card-subtitle mb-2 text-muted">
-                Tag:
-                @Html.DisplayFor(modelItem => item.Tag) |
-                @Html.DisplayFor(modelItem => item.CreatedUtc) |
-                @Html.DisplayFor(modelItem => item.PublicOrPrivate)
-
-            </h6>
-            <p class="card-text">
-                @Html.DisplayFor(modelItem => item.Content)
-            </p>
-            @Html.ActionLink("Details", "Details", new { id = item.JournalEntryId }) 
+                </h6>
+                <p class="card-text">
+                    @Html.DisplayFor(modelItem => item.Content)
+                </p>
+                @Html.ActionLink("Details", "Details", new { id = item.JournalEntryId }) |
+                @Html.ActionLink("View Replies", "Details", new { id = item.JournalEntryId })
+            </div>
         </div>
-    </div>
 
-}
+    }
 
