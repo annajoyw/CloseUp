@@ -66,6 +66,8 @@
     <Compile Include="PromptModels\PromptReplies.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReplyModels\ReplyCreate.cs" />
+    <Compile Include="ReplyModels\ReplyDetail.cs" />
+    <Compile Include="ReplyModels\ReplyEdit.cs" />
     <Compile Include="ReplyModels\ReplyListItem.cs" />
     <Compile Include="ResourceModels\ResourceCreate.cs" />
     <Compile Include="ResourceModels\ResourceDetail.cs" />

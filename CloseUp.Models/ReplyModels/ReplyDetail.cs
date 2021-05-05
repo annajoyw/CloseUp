@@ -4,12 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CloseUp.Models
+namespace CloseUp.Models.ReplyModels
 {
-    public class ReplyCreate
+    public class ReplyDetail
     {
-        public int JournalEntryId { get; set; }
-
+        public int ReplyId { get; set; }
         public string Comment { get; set; }
     }
 }

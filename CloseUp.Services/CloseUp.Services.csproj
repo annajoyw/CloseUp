@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PublicPostServices.cs" />
+    <Compile Include="ReplyServices.cs" />
     <Compile Include="ResourceServices.cs" />
     <Compile Include="JournalEntryServices.cs" />
     <Compile Include="PromptServices.cs" />
