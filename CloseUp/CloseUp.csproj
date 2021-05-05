@@ -289,6 +289,7 @@
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\PromptController.cs" />
     <Compile Include="Controllers\PublicEntryController.cs" />
+    <Compile Include="Controllers\ReplyController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -377,6 +378,7 @@
     <Content Include="Views\HelpResources\Details.cshtml" />
     <Content Include="Views\Prompt\Details.cshtml" />
     <Content Include="Views\JournalEntry\PublicJournalEntries.cshtml" />
+    <Content Include="Views\Reply\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

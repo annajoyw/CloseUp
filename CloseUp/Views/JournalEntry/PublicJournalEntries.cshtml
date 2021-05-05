@@ -23,13 +23,14 @@
                     Tag:
                     @Html.DisplayFor(modelItem => item.Tag) |
                     @Html.DisplayFor(modelItem => item.CreatedUtc) |
-                   
+
 
                 </h6>
                 <p class="card-text">
                     @Html.DisplayFor(modelItem => item.Content)
                 </p>
                 @Html.ActionLink("Details", "Details", new { id = item.JournalEntryId }) |
+                @Html.ActionLink("Reply to this Entry", "../Reply/Create", new { id = item.JournalEntryId })|
                 @Html.ActionLink("View Replies", "Details", new { id = item.JournalEntryId })
             </div>
         </div>
