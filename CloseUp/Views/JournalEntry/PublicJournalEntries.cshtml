@@ -31,7 +31,7 @@
                 </p>
                 @Html.ActionLink("Details", "Details", new { id = item.JournalEntryId }) |
                 @Html.ActionLink("Reply to this Entry", "../Reply/Create", new { id = item.JournalEntryId })|
-                @Html.ActionLink("View Replies", "Details", new { id = item.JournalEntryId })
+                @Html.ActionLink("View Replies", "../Reply/ViewEntryReplies", new { id = item.JournalEntryId })
             </div>
         </div>
 

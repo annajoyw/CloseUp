@@ -37,6 +37,25 @@ namespace CloseUp.Services
 
         }
 
+        public IEnumerable<ReplyListItem> GetEntryReplies(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .Replies
+                    .Where(e => e.JournalEntryId == id)
+                    .Select(
+                        e =>
+                        new ReplyListItem
+                        {
+                            Comment = e.Comment
+                        }
+                        );
+                return query.ToArray();
+            }
+        }
+
         public IEnumerable<ReplyListItem> GetReplies()
         {
 

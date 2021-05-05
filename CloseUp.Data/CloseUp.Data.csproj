@@ -100,6 +100,10 @@
     <Compile Include="Migrations\202105030247016_newEnum.designer.cs">
       <DependentUpon>202105030247016_newEnum.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105050142379_idkaaa.cs" />
+    <Compile Include="Migrations\202105050142379_idkaaa.designer.cs">
+      <DependentUpon>202105050142379_idkaaa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PromptItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -139,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105030247016_newEnum.resx">
       <DependentUpon>202105030247016_newEnum.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105050142379_idkaaa.resx">
+      <DependentUpon>202105050142379_idkaaa.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

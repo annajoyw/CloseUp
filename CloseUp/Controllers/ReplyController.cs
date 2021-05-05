@@ -49,6 +49,14 @@ namespace CloseUp.Controllers
             return View(model);
         }
 
-        //public ActionResult ViewEntryReplies()
+        public ActionResult ViewEntryReplies(int journalEntryId)
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ReplyServices(userId);
+
+            var model = service.GetEntryReplies(journalEntryId);
+
+            return View(model);
+        }
     }
 }
