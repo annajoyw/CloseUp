@@ -25,7 +25,11 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("My Journal", "Index", "JournalEntry")</li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("My Journal", "Index", "JournalEntry")</li>
+                    }
+
                     <li>@Html.ActionLink("Prompts", "Index", "Prompt")</li>
                     <li>@Html.ActionLink("Help Resources", "Index", "HelpResources")</li>
                     <li>@Html.ActionLink("Browse", "PublicJournalEntries", "JournalEntry", new { publicPost = PublicOrPrivate.Public }, new { })</li>

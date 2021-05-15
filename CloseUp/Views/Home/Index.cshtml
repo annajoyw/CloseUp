@@ -15,7 +15,10 @@
             View and manage your journal entries here. Please note you must be logged in to utilize.
         </p>
         <p class="text">
-            @Html.ActionLink("Journal Entries","Index","JournalEntry")
+            @if (User.Identity.IsAuthenticated)
+            {
+                <li>@Html.ActionLink("My Journal", "Index", "JournalEntry")</li>
+            }
         </p>
     </div>
     <div class="col-md-4">
