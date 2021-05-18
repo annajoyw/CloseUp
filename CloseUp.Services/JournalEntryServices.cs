@@ -113,7 +113,7 @@ namespace CloseUp.Services
                 {
                     var entity =
                         ctx.JournalEntries
-                        .Single(x => x.JournalEntryId == id);
+                        .SingleOrDefault(x => x.JournalEntryId == id);
                     return
                         new JournalEntryDetail
                         {

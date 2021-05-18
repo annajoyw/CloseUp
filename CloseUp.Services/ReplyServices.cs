@@ -18,6 +18,50 @@ namespace CloseUp.Services
             _userId = userId;
         }
 
+        public IEnumerable<JournalEntryListItem> GetPublicPosts(PublicOrPrivate publicPost)
+        {
+
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                    .JournalEntries
+                    .Where(x => x.PublicOrPrivate == publicPost)
+                    .Select(
+                         x => new JournalEntryListItem
+                         {
+
+                             Tag = x.Tag,
+                             Prompt = x.PromptItem.Prompt,
+                             Content = x.Content,
+                             PhotoUrl = x.PhotoUrl,
+                             CreatedUtc = x.CreatedUtc
+                         }
+                        );
+                return query.ToArray();
+
+            }
+        }
+        public JournalEntryDetail GetEntryById(int id)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx.JournalEntries
+                    .SingleOrDefault(x => x.JournalEntryId == id);
+                return
+                    new JournalEntryDetail
+                    {
+                        JournalEntryId = entity.JournalEntryId,
+                        Prompt = entity.PromptItem.Prompt,
+                        Content = entity.Content,
+                        PhotoUrl = entity.PhotoUrl,
+                        Tag = entity.Tag,
+                        PublicOrPrivate = entity.PublicOrPrivate
+                    };
+            }
+        }
+
         public bool CreateReply(ReplyCreate model)
         {
 

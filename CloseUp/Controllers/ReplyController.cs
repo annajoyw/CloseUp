@@ -1,4 +1,5 @@
-﻿using CloseUp.Models;
+﻿using CloseUp.Data;
+using CloseUp.Models;
 using CloseUp.Services;
 using Microsoft.AspNet.Identity;
 using System;
@@ -11,12 +12,18 @@ namespace CloseUp.Controllers
 {
     public class ReplyController : Controller
     {
-        // GET: Reply
-        public ActionResult Index()
-        {
-            return View();
-        }
+     
 
+        [HttpGet]
+        public ActionResult PublicJournalEntries(PublicOrPrivate publicPost)
+        {
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ReplyServices(userId);
+
+            var model = service.GetPublicPosts(publicPost);
+
+            return View(model);
+        }
         //get create
         public ActionResult Create(int id)
         {
@@ -55,6 +62,16 @@ namespace CloseUp.Controllers
             var service = new ReplyServices(userId);
 
             var model = service.GetEntryReplies(journalEntryId);
+
+            return View(model);
+        }
+
+        public ActionResult Details(int id)
+        {
+
+            var userId = Guid.Parse(User.Identity.GetUserId());
+            var service = new ReplyServices(userId);
+            var model = service.GetEntryById(id);
 
             return View(model);
         }
