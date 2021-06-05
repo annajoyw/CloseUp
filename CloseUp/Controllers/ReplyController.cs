@@ -66,9 +66,10 @@ namespace CloseUp.Controllers
             return View(model);
         }
 
+
+        //ID HERE DOES NOT CAPTURE VALUE, (BECAUSE VALUE IS IN OTHER CONTROLLER POSSIBLY?)
         public ActionResult Details(int id)
         {
-
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new ReplyServices(userId);
             var model = service.GetEntryById(id);

@@ -1,4 +1,6 @@
 ﻿@model IEnumerable<CloseUp.Models.JournalEntryListItem>
+@using CloseUp.Models
+@using CloseUp.Data
 <link href="@Url.Content("~/Content/JournalIndex.css")" rel="stylesheet" type="text/css" />
 @{
     ViewBag.Title = "PublicJournalEntries";
@@ -12,28 +14,28 @@
     </p>
 </div>
 
-    @foreach (var item in Model)
-    {
-        <div class="card" style="width: auto;">
-            <div class="card-body">
-                <h5 class="card-title">
-                    @Html.DisplayFor(modelItem => item.Prompt)
-                </h5>
-                <h6 class="card-subtitle mb-2 text-muted">
-                    Tag:
-                    @Html.DisplayFor(modelItem => item.Tag) |
-                    @Html.DisplayFor(modelItem => item.CreatedUtc) |
+@foreach (var item in Model)
+{
+    <div class="card" style="width: auto;">
+        <div class="card-body">
+            <h5 class="card-title">
+                @Html.DisplayFor(modelItem => item.Prompt)
+            </h5>
+            <h6 class="card-subtitle mb-2 text-muted">
+                Tag:
+                @Html.DisplayFor(modelItem => item.Tag) |
+                @Html.DisplayFor(modelItem => item.CreatedUtc) |
 
 
-                </h6>
-                <p class="card-text">
-                    @Html.DisplayFor(modelItem => item.Content)
-                </p>
-                @Html.ActionLink("Details", "Details", new { id = item.JournalEntryId }) |
-                @Html.ActionLink("Reply to this Entry", "../Reply/Create", new { id = item.JournalEntryId })|
-                @Html.ActionLink("View Replies", "../Reply/ViewEntryReplies", new { id = item.JournalEntryId })
-            </div>
+            </h6>
+            <p class="card-text">
+                @Html.DisplayFor(modelItem => item.Content)
+            </p>
+            @Html.ActionLink("Details", "Details", new { id = item.JournalEntryId }) |
+            @Html.ActionLink("Reply to this Entry", "../Reply/Create", new { id = item.JournalEntryId })|
+            @Html.ActionLink("View Replies", "../Reply/ViewEntryReplies", new { id = item.JournalEntryId })
         </div>
+    </div>
 
-    }
+}
 
